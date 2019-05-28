@@ -1,0 +1,40 @@
+/* Default Section */
+html, body {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+body {
+  overflow-x: hidden !important;
+  background: url(/images/tools.jpg) no-repeat 50% fixed/cover;
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  width: 100vw;
+}
+
+a, h1, h2, h3, h4, p {
+  color: white;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+a:hover p, a:hover {
+  color: #ababab;
+}
+
+input, textarea {
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Parisienne", cursive;
+  font-weight: 300;
+  font-size: 2.5em;
+}
+
+/* Index Section */
+/* Reusability Section */
+/* Media Queries Section */
+
+/*# sourceMappingURL=base.css.map */
