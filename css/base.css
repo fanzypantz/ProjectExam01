@@ -5,12 +5,20 @@ html, body {
   outline: 0;
 }
 
+a {
+  text-decoration: none;
+}
+a h2, a h3 {
+  color: black;
+}
+
 body {
   background-color: white;
   position: relative;
   font-family: mr-eaves-xl-modern, sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: black;
 }
 
 header {
@@ -19,6 +27,83 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+}
+header .container-logo {
+  position: absolute;
+  top: 14%;
+  left: 10%;
+}
+header .container-logo svg {
+  margin-left: 10px;
+}
+header .container-logo h1 {
+  margin: 5px 0;
+  color: white;
+  font-size: 4.5em;
+  font-family: letter-gothic-std, monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+header .scrollbar {
+  position: fixed;
+  height: 65vh;
+  width: 8px;
+  background-color: rgba(142, 142, 142, 0.35);
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+header .scrollbar .scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #bbbbbb;
+  width: 100%;
+  height: calc(100% / 8);
+  border-radius: 5px;
+}
+header .nav {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: 175px;
+  transform: translateY(-50%);
+}
+header .nav .nav-element {
+  background-color: white;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1px 0;
+}
+header .nav .nav-element:hover {
+  background-color: #787878;
+}
+header .nav .nav-element:hover p, header .nav .nav-element:hover h2 {
+  color: white;
+}
+header .nav .nav-element p, header .nav .nav-element h2 {
+  margin: 5px;
+  margin-left: 20px;
+}
+header .nav .nav-element p {
+  color: #787878;
+}
+
+header .nav .nav-element.active {
+  background-color: black;
+}
+header .nav .nav-element.active:hover {
+  background-color: #787878;
+}
+header .nav .nav-element.active:hover p, header .nav .nav-element.active:hover h2 {
+  color: white;
+}
+header .nav .nav-element.active h2 {
+  color: white;
 }
 
 .bg-main {
@@ -51,21 +136,30 @@ header {
 /* Index Section */
 #header-index {
   background: url(/images/header01.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 #hero01 {
   background: url(/images/hero01.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 #hero02 {
   background: url(/images/hero02.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 #hero03 {
   background: url(/images/hero03.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 /* Reusability Section */
+#header-reusability {
+  background: url(/images/header02.jpg) no-repeat center center;
+  background-size: cover;
+}
+
 /* Media Queries Section */
 
 /*# sourceMappingURL=base.css.map */

@@ -27,9 +27,9 @@ switch ($_SERVER["SCRIPT_NAME"]) {
         break;
     default:
         $CURRENT_PAGE = "Index";
-        $PAGE_TITLE = "Sustainable Leather Craftsmanship";
-        $KEYWORDS = "sustainable letha leather craftsmanship belt wallet shoes derbies oxford brouge hiking";
-        $DESCRIPTION = "Sustainable Leather Craftsmanship";
+        $PAGE_TITLE = "Space Exploration Technologies";
+        $KEYWORDS = "";
+        $DESCRIPTION = "";
 }
 
 const SHOES = [
