@@ -56,7 +56,7 @@ header .scrollbar {
 }
 header .scrollbar .scroll {
   position: absolute;
-  top: 0;
+  top: 12.5%;
   left: 0;
   background-color: #bbbbbb;
   width: 100%;
@@ -122,15 +122,34 @@ header .nav .nav-element.active h2 {
 }
 
 .container-normal {
+  position: relative;
   height: 100vh;
   width: 60%;
   margin: 0 auto;
 }
 
 .one-page {
+  position: relative;
   width: 100vw;
   height: 100vh;
   box-shadow: 0 0 15px black;
+}
+
+.link-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.link-text h3 {
+  color: white;
+  font-size: 25px;
+  line-height: 40px;
+  margin: 0 40px;
+  font-family: letter-gothic-std, monospace;
+  font-weight: 300;
+  font-style: normal;
 }
 
 /* Index Section */
@@ -152,6 +171,207 @@ header .nav .nav-element.active h2 {
 #hero03 {
   background: url(/images/hero03.jpg) no-repeat center center;
   background-size: cover;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.history h2 {
+  line-height: 38px;
+}
+.history .text {
+  font-size: 1.4em;
+  line-height: 28px;
+  margin: 0;
+}
+.history .reflight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+.history .reflight svg {
+  width: 64%;
+  height: 10px;
+  stroke: black;
+  stroke-width: 5px;
+}
+.history .reflight h3 {
+  font-size: 2em;
+  margin: 0;
+  width: 18%;
+}
+.history .reflight h3:last-of-type {
+  text-align: right;
+}
+.history #history {
+  margin-left: 150px;
+  width: 145px;
+  border-right: 5px solid black;
+}
+.history #history:after {
+  content: "story";
+  color: #005288;
+}
+.history .hangar {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.history .hangar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 50%;
+}
+.history h2 {
+  margin: 0;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: letter-gothic-std, monospace;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 2px black;
+}
+.slogan .text {
+  text-align: center;
+  font-size: 2em;
+}
+.slogan .signature {
+  font-size: 2em;
+  text-align: right;
+  font-family: wreath, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gallery .description {
+  position: absolute;
+  top: 50%;
+  right: -3%;
+  transform: translateY(-50%);
+  font-size: 2em;
+}
+.gallery .description p {
+  margin: 10px 0;
+}
+.gallery .description .container-gallery-text {
+  color: #787878;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 740px;
+}
+.gallery .description .container-gallery-text .text {
+  width: 300px;
+  margin-left: 40px;
+  align-self: flex-end;
+}
+.gallery .description .container-gallery-text .line {
+  width: 340px;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gallery .description .container-gallery-text .line p {
+  color: white;
+  margin-right: 20px;
+}
+.gallery .description .container-gallery-text .line svg {
+  width: 300px;
+  height: 6px;
+  stroke: white;
+  stroke-width: 3px;
+}
+.gallery .description .container-gallery-text:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.gallery .description .container-gallery-text:hover .line {
+  opacity: 1;
+}
+.gallery .images {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+}
+.gallery .images .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 430px;
+  object-fit: cover;
+  object-position: 100% 50%;
+  filter: saturate(0%);
+}
+.gallery .images #img-01 {
+  transform: translate(0, -50%);
+}
+.gallery .images #img-02 {
+  transform: translate(40px, -50%) scale(1.1);
+}
+.gallery .images #img-03 {
+  transform: translate(80px, -50%) scale(1.2);
+}
+.gallery .images #img-04 {
+  transform: translate(120px, -50%) scale(1.3);
+}
+.gallery .images #img-05 {
+  transform: translate(160px, -50%) scale(1.4);
+}
+.gallery .images .selected {
+  filter: none;
+}
+
+#index-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#index-cta #dragon-space {
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+#index-cta #two-row-dragon {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+#index-cta #two-row-dragon #landing, #index-cta #two-row-dragon #core-hangar {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  margin-top: 20px;
+}
+#index-cta #two-row-dragon #landing {
+  margin-right: 10px;
+}
+#index-cta #two-row-dragon #core-hangar {
+  margin-right: 10px;
+}
+#index-cta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 50%;
 }
 
 /* Reusability Section */

@@ -19,7 +19,7 @@
 </section>
 
 <section  class="container-normal">
-   
+
 </section>
 
 <?php endblock() ?>
