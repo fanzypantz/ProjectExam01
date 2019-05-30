@@ -1,29 +1,23 @@
 
 <?php
 switch ($_SERVER["SCRIPT_NAME"]) {
-    case "/contact.php":
-        $CURRENT_PAGE = "Contact";
-        $PAGE_TITLE = "Contact Us";
-        $KEYWORDS = "contact email social-media";
-        $DESCRIPTION = "Contact Us!";
+    case "/missions.php":
+        $CURRENT_PAGE = "Missions";
+        $PAGE_TITLE = "missions";
+        $KEYWORDS = "";
+        $DESCRIPTION = "";
         break;
-    case "/about.php":
-        $CURRENT_PAGE = "About";
-        $PAGE_TITLE = "About Us";
-        $KEYWORDS = "history story craftsmanship vision ideals";
-        $DESCRIPTION = "Our History";
+    case "/reusability.php":
+        $CURRENT_PAGE = "Reusability";
+        $PAGE_TITLE = "Reusability";
+        $KEYWORDS = "";
+        $DESCRIPTION = "";
         break;
-    case "/products.php":
-        $CURRENT_PAGE = "Products";
-        $PAGE_TITLE = "Our Selection of Products";
-        $KEYWORDS = "brouge oxford derbies wallets belts polish";
-        $DESCRIPTION = "Our Selection of Products";
-        break;
-    case "/faq.php":
-        $CURRENT_PAGE = "FAQ";
-        $PAGE_TITLE = "Frequently Asked Questions";
-        $KEYWORDS = "FAQ frequently asked questions";
-        $DESCRIPTION = "Frequently Asked Questions";
+    case "/rockets.php":
+        $CURRENT_PAGE = "Rockets";
+        $PAGE_TITLE = "Rockets";
+        $KEYWORDS = "";
+        $DESCRIPTION = "";
         break;
     default:
         $CURRENT_PAGE = "Index";

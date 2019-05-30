@@ -22,6 +22,7 @@ body {
 }
 
 header {
+  z-index: 200;
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -377,6 +378,18 @@ header .nav .nav-element.active h2 {
 /* Reusability Section */
 #header-reusability {
   background: url(/images/header02.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* Rockets Section */
+#header-rockets {
+  background: url(/images/header03.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* Missions Section */
+#header-missions {
+  background: url(/images/header04.jpg) no-repeat center center;
   background-size: cover;
 }
 
