@@ -137,18 +137,19 @@
     </div>
 </section>
 
-<section  class="container-normal">
-    <div>
-        <h1>Relive your dreams</h1>
+<section id="business" class="container-normal">
+    <div class="column">
+        <h1 id="dreams">Relive your dreams</h1>
         <div>
-            <img src="" alt="">
+            <img src="/images/business01.jpg" alt="man looking at planning board">
         </div>
     </div>
-    <div>
+    <div class="column">
         <div>
-            <img src="" alt="">
+            <img src="/images/elon_musk.jpg" alt="elon musk">
         </div>
-        <h1>Available Jobs</h1>
+        <h1 id="jobs">Available Jobs</h1>
+        <a class="career-button" href="https://www.spacex.com/careers" target="_blank">Career</a>
     </div>
 </section>
 

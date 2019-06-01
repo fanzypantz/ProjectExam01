@@ -375,6 +375,46 @@ header .nav .nav-element.active h2 {
   object-position: 100% 50%;
 }
 
+#business {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#business .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 700px;
+  width: 260px;
+  margin: 50px;
+}
+#business .column #dreams, #business .column #jobs {
+  border-bottom: 5px solid black;
+}
+#business .column img {
+  width: 100%;
+}
+#business .column .career-button {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 2em;
+  margin-top: auto;
+}
+#business .column .career-button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#business .column h1 {
+  margin: 0;
+  font-size: 3em;
+  word-wrap: break-spaces;
+  font-family: letter-gothic-std, monospace;
+  font-weight: 600;
+}
+
 /* Reusability Section */
 #header-reusability {
   background: url(/images/header02.jpg) no-repeat center center;
