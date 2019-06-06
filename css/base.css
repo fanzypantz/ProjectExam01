@@ -136,6 +136,10 @@ header .nav .nav-element.active h2 {
   box-shadow: 0 0 15px black;
 }
 
+.noHover {
+  pointer-events: none;
+}
+
 .link-text {
   position: absolute;
   bottom: 0;
@@ -421,16 +425,307 @@ header .nav .nav-element.active h2 {
   background-size: cover;
 }
 
+#reflight-gallery {
+  position: relative;
+}
+#reflight-gallery .link-text {
+  opacity: 0;
+  text-align: center;
+  transition: opacity 250ms ease-in-out;
+}
+#reflight-gallery .card {
+  width: 350px;
+  height: 233px;
+  position: absolute;
+}
+#reflight-gallery .card:hover {
+  z-index: 100;
+}
+#reflight-gallery .card:hover .link-text {
+  opacity: 1;
+}
+#reflight-gallery .card:hover .card-desc {
+  opacity: 1;
+}
+#reflight-gallery .card .card-desc {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  opacity: 0;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  transition: opacity 250ms ease-in-out;
+}
+#reflight-gallery .card .card-desc .title {
+  text-transform: uppercase;
+}
+
+#reflight-01 {
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#reflight-02 {
+  z-index: 98;
+  top: 56%;
+  left: 36%;
+}
+
+#reflight-03 {
+  z-index: 97;
+  top: 48%;
+  left: 13%;
+}
+
+#reflight-04 {
+  z-index: 96;
+  top: 28%;
+  left: 9%;
+}
+
+#reflight-05 {
+  z-index: 96;
+  top: 14%;
+  left: 36%;
+}
+
+#reflight-06 {
+  z-index: 97;
+  top: 24%;
+  left: 54%;
+}
+
+#reflight-07 {
+  z-index: 97;
+  top: 42%;
+  left: 64%;
+}
+
+#cores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cores .falcon-cores {
+  background-color: white;
+  box-shadow: 0 0 15px black;
+  width: 60%;
+  margin: 20px auto;
+  text-align: center;
+}
+#cores .cores-row {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+  height: 300px;
+}
+#cores .cores-row .core-card {
+  width: 200px;
+  height: 300px;
+  position: relative;
+}
+#cores .cores-row .core-card .link-text {
+  text-align: center;
+}
+#cores .cores-row .core-card img {
+  width: 100%;
+}
+
+#first-landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#first-landing .youtube {
+  position: relative;
+  width: 60%;
+  height: 40%;
+  margin: 0 auto;
+}
+#first-landing .youtube .link-text {
+  bottom: 3px;
+}
+#first-landing .youtube iframe {
+  width: 100%;
+  height: 100%;
+}
+
 /* Rockets Section */
 #header-rockets {
   background: url(/images/header03.jpg) no-repeat center center;
   background-size: cover;
 }
 
+#falcon-9 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#falcon-9 .rocket {
+  position: relative;
+  margin: 0 20px;
+}
+#falcon-9 .rocket .landing-legs {
+  z-index: 4;
+  position: absolute;
+  bottom: 4.5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#falcon-9 .rocket .engines {
+  z-index: 2;
+  transform: translateY(-15px);
+}
+#falcon-9 #falcon-9-dragon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#falcon-9 #falcon-9-dragon #falcon-9-dragon-capsule {
+  transform: translateY(5px);
+}
+#falcon-9 #falcon-9-dragon #falcon-9-dragon-lower {
+  z-index: 1;
+  transform: translateY(-13px);
+}
+#falcon-9 #falcon-9-dragon #falcon-9-dragon-upper {
+  z-index: 3;
+}
+#falcon-9 #falcon-9-sat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#falcon-9 #falcon-9-sat #falcon-9-sat-third {
+  transform: translateY(5px);
+}
+#falcon-9 #falcon-9-sat #falcon-9-sat-lower {
+  z-index: 2;
+  transform: translateY(-13px);
+}
+#falcon-9 #falcon-9-sat #falcon-9-sat-upper {
+  z-index: 3;
+}
+#falcon-9 #falcon-9-exp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#falcon-9 #falcon-9-exp #falcon-9-exp-third {
+  transform: translateY(5px);
+}
+#falcon-9 #falcon-9-exp #falcon-9-exp-lower {
+  z-index: 1;
+  transform: translateY(-13px);
+}
+#falcon-9 #falcon-9-exp #falcon-9-exp-upper {
+  z-index: 3;
+}
+
+#falcon-heavy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#falcon-heavy .rocket {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#falcon-heavy #falcon-heavy-lower {
+  z-index: 2;
+  transform: scale(2.37) translateY(36px);
+}
+#falcon-heavy #falcon-heavy-landing {
+  z-index: 4;
+  transform: scale(2.5) translateY(35px);
+}
+#falcon-heavy #falcon-heavy-engine {
+  z-index: 3;
+  transform: scale(2.34) translateY(23px);
+}
+#falcon-heavy #falcon-heavy-upper {
+  z-index: 5;
+}
+
+#falcon-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#falcon-1 .rocket {
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#falcon-1 #falcon-1-engine {
+  transform: translateY(-47px);
+}
+
 /* Missions Section */
 #header-missions {
   background: url(/images/header04.jpg) no-repeat center center;
   background-size: cover;
+}
+
+#missions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 40px;
+}
+#missions .container-mission {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 20px auto;
+}
+#missions .container-mission .mission-name {
+  text-align: center;
+  font-family: letter-gothic-std, monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+#missions .container-mission .mission-description {
+  margin: 20px 40px;
+}
+#missions .container-mission .mission-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px;
+}
+#missions .container-mission .mission-title .container-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  border-bottom: 2px solid white;
+}
+#missions .container-mission .mission-title .container-title p {
+  margin: 0;
+}
+#missions .container-mission .mission-title .container-title:nth-of-type(2) {
+  margin: 0 40px;
 }
 
 /* Media Queries Section */

@@ -3,3 +3,47 @@
 #header-missions
   background: url(/images/header04.jpg) no-repeat center center
   background-size: cover
+
+#missions
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: auto
+  margin-top: 40px
+
+  .container-mission
+    width: 100%
+    background-color: black
+    display: flex
+    flex-direction: column
+    color: white
+    margin: 20px auto
+
+    .mission-name
+      text-align: center
+      font-family: letter-gothic-std, monospace
+      font-weight: 600
+      font-style: normal
+
+    .mission-description
+      margin: 20px 40px
+
+    .mission-title
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin: 0 40px
+
+      .container-title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 30%
+        border-bottom: 2px solid white
+
+        p
+          margin: 0
+
+        &:nth-of-type(2)
+          margin: 0 40px

@@ -3,3 +3,117 @@
 #header-rockets
   background: url(/images/header03.jpg) no-repeat center center
   background-size: cover
+
+#falcon-9
+  display: flex
+  justify-content: center
+  align-items: flex-end
+
+  .rocket
+    position: relative
+    margin: 0 20px
+
+    .landing-legs
+      z-index: 4
+      position: absolute
+      bottom: 4.5%
+      left: 50%
+      transform: translateX(-50%)
+
+    .engines
+      z-index: 2
+      transform: translateY(-15px)
+
+  #falcon-9-dragon
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    #falcon-9-dragon-capsule
+      transform: translateY(5px)
+
+    #falcon-9-dragon-lower
+      z-index: 1
+      transform: translateY(-13px)
+
+    #falcon-9-dragon-upper
+      z-index: 3
+
+  #falcon-9-sat
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    #falcon-9-sat-third
+      transform: translateY(5px)
+
+    #falcon-9-sat-lower
+      z-index: 2
+      transform: translateY(-13px)
+
+    #falcon-9-sat-upper
+      z-index: 3
+
+  #falcon-9-exp
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    #falcon-9-exp-third
+      transform: translateY(5px)
+
+    #falcon-9-exp-lower
+      z-index: 1
+      transform: translateY(-13px)
+
+    #falcon-9-exp-upper
+      z-index: 3
+
+
+#falcon-heavy
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: relative
+
+  .rocket
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  #falcon-heavy-lower
+    z-index: 2
+    transform: scale(2.37) translateY(36px)
+
+  #falcon-heavy-landing
+    z-index: 4
+    transform: scale(2.5) translateY(35px)
+
+  #falcon-heavy-engine
+    z-index: 3
+    transform: scale(2.34) translateY(23px)
+
+  #falcon-heavy-upper
+    z-index: 5
+
+#falcon-1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+
+    .rocket
+      width: 35px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+    #falcon-1-engine
+      transform: translateY(-47px)
