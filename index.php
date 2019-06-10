@@ -19,12 +19,12 @@
     <p class="text">
         SpaceX has gained worldwide attention for a series of historic milestones. It is the only private company capable of returning a spacecraft from low Earth orbit, which it first accomplished in 2010. The company made history again in 2012 when its Dragon spacecraft became the first commercial spacecraft to deliver cargo to and from the International Space Station.
     </p>
-    <div class="hangar">
+    <a href="rockets.php" class="hangar">
         <img src="/images/hangar.jpg" alt="">
         <div class="link-text">
             <h3>Falcon Rockets</h3>
         </div>
-    </div>
+    </a>
 </section>
 
 <section id="hero01" class="one-page">
@@ -39,10 +39,10 @@
 
 <section  class="container-normal gallery">
     <div class="images">
-        <img id="img-01" class="image" src="/images/gallery05.jpg" alt="">
+        <img id="img-01" class="image" src="/images/gallery04.jpg" alt="">
         <img id="img-02" class="image" src="/images/gallery02.jpg" alt="">
         <img id="img-03" class="image" src="/images/gallery05.jpg" alt="">
-        <img id="img-04" class="image" src="/images/gallery04.jpg" alt="">
+        <img id="img-04" class="image" src="/images/gallery03.jpg" alt="">
         <img id="img-05" class="image selected" src="/images/gallery01.jpg" alt="">
     </div>
     <div class="description">
@@ -89,7 +89,7 @@
                     <line x1="0%" y1="3px" x2="100%" y2="3px" />
                 </svg>
             </div>
-            <p id="text-05" class="text">5. Docking Clamp</p>
+            <p id="text-05" class="text">5. Raptor Engines</p>
         </div>
     </div>
 </section>
@@ -105,20 +105,20 @@
 </section>
 
 <section id="index-cta" class="container-normal">
-    <a id="dragon-space" href="">
+    <a id="dragon-space" href="rockets.php#falcon-9">
         <img src="/images/dragon_capsule.jpg" alt="dragon capsule in space">
         <div class="link-text">
             <h3>Dragon Capsules</h3>
         </div>
     </a>
     <div id="two-row-dragon">
-        <a id="landing" href="">
+        <a id="landing" href="missions.php#missions">
             <img src="/images/ofc_ilu_landing.jpg" alt="falcon core landing">
             <div class="link-text">
                 <h3>Launch Missions</h3>
             </div>
         </a>
-        <a id="core-hangar" href="">
+        <a id="core-hangar" href="reusability.php#cores">
             <img src="/images/falcon_core.jpg" alt="falcon core in hangar">
             <div class="link-text">
                 <h3>Falcon Cores</h3>
@@ -152,5 +152,7 @@
         <a class="career-button" href="https://www.spacex.com/careers" target="_blank">Career</a>
     </div>
 </section>
+
+<script type="text/javascript" src="/js/index.js"></script>
 
 <?php endblock() ?>

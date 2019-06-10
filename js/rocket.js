@@ -275,8 +275,6 @@ let createCards = function () {
 
 };
 
-
-
 let toggleVisibility = function (element, event) {
     if (element.classList.contains('shown') && event.type === 'mouseleave') {
         element.style.opacity = '0';

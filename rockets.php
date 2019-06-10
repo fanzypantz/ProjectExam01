@@ -4,8 +4,6 @@
 
 <section id="header-rockets" class="one-page">
 
-    <script type="text/javascript" src="/js/rocket.js"></script>
-
 </section>
 
 <section id="falcon-9" class="container-normal">
@@ -60,4 +58,5 @@
 
 </section>
 
+<script type="text/javascript" src="/js/rocket.js"></script>
 <?php endblock() ?>
