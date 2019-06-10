@@ -4,7 +4,7 @@
 
 <section id="header-rockets" class="one-page">
 
-
+    <script type="text/javascript" src="/js/rocket.js"></script>
 
 </section>
 
@@ -15,6 +15,8 @@
         <img id="falcon-9-dragon-lower" class="rocket-part" src="/images/svg/first_stage.svg" alt="">
         <img id="falcon-9-dragon-landing" class="landing-legs rocket-part" src="/images/svg/landing_legs.svg" alt="">
         <img id="falcon-9-dragon-engine" class="engines rocket-part" src="/images/svg/engines.svg" alt="">
+
+
     </div>
 
 
@@ -33,14 +35,11 @@
         <img id="falcon-9-exp-engine" class="engines rocket-part" src="/images/svg/engines.svg" alt="">
     </div>
 
-
-
-
 </section>
 
 <section id="falcon-heavy" class="container-normal">
 
-    <div class="rocket">
+    <div id="falcon-9-heavy" class="rocket">
         <img id="falcon-heavy-third" class="rocket-part" src="/images/svg/third_stage.svg" alt="">
         <img id="falcon-heavy-upper" class="rocket-part" src="/images/svg/upper_stage.svg" alt="">
         <img id="falcon-heavy-lower" class="rocket-part" src="/images/svg/heavy_first_stage.svg" alt="">
@@ -53,7 +52,7 @@
 
 <section id="falcon-1"  class="container-normal">
 
-    <div class="rocket">
+    <div id="falcon-1-rocket" class="rocket">
         <img id="falcon-1-upper" class="rocket-part" src="/images/svg/falcon1_upper.svg" alt="">
         <img id="falcon-1-lower" class="rocket-part" src="/images/svg/falcon1_lower.svg" alt="">
         <img id="falcon-1-engine" class="rocket-part" src="/images/svg/falcon1_engine.svg" alt="">

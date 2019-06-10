@@ -1,7 +1,7 @@
 <header>
 
-    <div class="scrollbar">
-        <div class="scroll"></div>
+    <div id="scrollbar" class="scrollbar">
+        <div id="scroll" class="scroll"></div>
     </div>
 
     <div class="container-logo">

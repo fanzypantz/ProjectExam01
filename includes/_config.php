@@ -3,7 +3,7 @@
 switch ($_SERVER["SCRIPT_NAME"]) {
     case "/missions.php":
         $CURRENT_PAGE = "Missions";
-        $PAGE_TITLE = "missions";
+        $PAGE_TITLE = "Missions";
         $KEYWORDS = "";
         $DESCRIPTION = "";
         break;
