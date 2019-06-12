@@ -4,16 +4,14 @@
 <html lang="en">
     <head>
         <title>Letha - <?php print $PAGE_TITLE;?></title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="<?php print $KEYWORDS;?>" />
         <meta name="description" content="<?php print $DESCRIPTION;?>" />
         <link rel="stylesheet" href="https://use.typekit.net/bfn8hng.css">
-
         <link rel="stylesheet" href="css/base.css">
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <?php startblock('head') ?>
 

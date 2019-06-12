@@ -58,5 +58,4 @@
 
 </section>
 
-<script type="text/javascript" src="/js/rocket.js"></script>
 <?php endblock() ?>

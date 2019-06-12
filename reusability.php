@@ -158,7 +158,4 @@
     </div>
 </section>
 
-<script type="text/javascript" src="/js/reusability.js"></script>
-
-
 <?php endblock() ?>

@@ -10,7 +10,4 @@
 
 </section>
 
-<script type="text/javascript" src="/js/missions.js"></script>
-
-
 <?php endblock() ?>

@@ -655,6 +655,7 @@ header .nav .nav-element.active h2 {
   justify-content: center;
   align-items: center;
   position: relative;
+  transform: translateY(-85px);
 }
 #falcon-heavy #falcon-heavy-lower {
   z-index: 2;
@@ -662,11 +663,13 @@ header .nav .nav-element.active h2 {
 }
 #falcon-heavy #falcon-heavy-landing {
   z-index: 4;
-  transform: scale(2.5) translateY(35px);
+  transform: scale(2.7) translate(1px, 53px);
+  height: 45px;
 }
 #falcon-heavy #falcon-heavy-engine {
   z-index: 3;
-  transform: scale(2.34) translateY(23px);
+  transform: scale(2.39) translateY(77px);
+  height: 10px;
 }
 #falcon-heavy #falcon-heavy-upper {
   z-index: 5;
@@ -732,7 +735,8 @@ header .nav .nav-element.active h2 {
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-top: 40px;
+  margin-top: 100px;
+  padding-bottom: 100px;
 }
 #missions .mission-column {
   display: flex;
@@ -761,11 +765,12 @@ header .nav .nav-element.active h2 {
 }
 #missions .container-mission {
   width: 100%;
-  background-color: black;
+  background-color: #787878;
   display: flex;
   flex-direction: column;
   color: white;
   margin: 20px auto;
+  border-bottom: 4px solid black;
 }
 #missions .container-mission .mission-description {
   margin: 20px 0;
