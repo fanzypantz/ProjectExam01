@@ -18,30 +18,49 @@ let createMissions = function () {
         }
     };
 
-    let missionDetails = function (details) {
-        if (details === null) {
+    let missionDetails = function (mission) {
+        let description = "";
+
+        if (mission.details === null) {
             return "No details yet.";
         } else {
-            return details
+            description += `
+                <p>${mission.details}</p>
+            `;
         }
+
+        if ( mission.hasOwnProperty('launch_failure_details') ) {
+            description += `
+                <p>Failure Details: ${mission.launch_failure_details.reason}</p>
+            `;
+        }
+
+        return description
     };
 
-    let missionSucess = function (mission) {
+    let missionSuccess = function (mission) {
         if (mission.launch_success !== null ) {
             if (mission.launch_success) {
                 return "Yes";
             } else {
-                return mission.launch_failure_details.reason
+                return  "No"
             }
         } else {
             return "Not Launched"
         }
-
+        // mission.launch_failure_details.reason
     };
 
-    // let missionDetails1 = function () {
-    //
-    // };
+    let createPayloads = function (payload) {
+        let payloads = "";
+
+        for (let i = 0; i < payload.length; i++) {
+            payloads += `
+                <p>Type: ${payload[i].payload_type} ID: ${payload[i].payload_id}</p>
+            `;
+        }
+        return payloads
+    };
 
     for (let i = 0; i < missions.length; i++) {
         let mission = missions[i];
@@ -62,7 +81,7 @@ let createMissions = function () {
                             </div>
                             <div class="container-title">
                                 <p>Successful Launch</p>
-                                <p>${missionSucess(mission)}</p>
+                                <p>${missionSuccess(mission)}</p>
                             </div>
                             <div class="container-title">
                                 <p>Launch Date UTC</p>
@@ -78,15 +97,16 @@ let createMissions = function () {
                             </div>
                             <div class="container-title">
                                 <p>Video Link</p>
-                                <a href="${mission.links.video_link}">YouTube</a>
+                                <a href="${mission.links.video_link}" target="_blank">YouTube</a>
                             </div>
                         </div>
-                        <p class="mission-description">${missionDetails(mission.details)}</p>
+                        <p class="mission-description">${missionDetails(mission)}</p>
                     </div>
                     <div class="mission-payloads">
                         <div class="container-title">
                             <p>Payloads</p>
                         </div>
+                        ${createPayloads(mission.rocket.second_stage.payloads)}
                     </div>
                 </div>
                 

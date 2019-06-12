@@ -15,19 +15,21 @@
   .mission-column
     display: flex
     justify-content: center
+    margin-bottom: 40px
 
   .mission-details
     width: 60%
 
   .mission-heading
     position: relative
-    margin: 20px 0
+    margin: 40px 0
 
     .patch
       position: absolute
-      top: 0
+      top: 50%
       left: 4%
-      height: 55px
+      transform: translateY(-50%)
+      height: 90px
 
     .mission-name
       text-align: center
@@ -62,6 +64,12 @@
       width: 48%
       border-bottom: 2px solid white
       margin: 10px 0
+
+      a
+        color: white
+
+        &:hover
+          color: red
 
       p
         margin: 0

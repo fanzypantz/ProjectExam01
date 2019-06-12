@@ -737,19 +737,21 @@ header .nav .nav-element.active h2 {
 #missions .mission-column {
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 #missions .mission-details {
   width: 60%;
 }
 #missions .mission-heading {
   position: relative;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 #missions .mission-heading .patch {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 4%;
-  height: 55px;
+  transform: translateY(-50%);
+  height: 90px;
 }
 #missions .mission-heading .mission-name {
   text-align: center;
@@ -782,6 +784,12 @@ header .nav .nav-element.active h2 {
   width: 48%;
   border-bottom: 2px solid white;
   margin: 10px 0;
+}
+#missions .container-mission .container-title a {
+  color: white;
+}
+#missions .container-mission .container-title a:hover {
+  color: red;
 }
 #missions .container-mission .container-title p {
   margin: 0;
