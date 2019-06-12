@@ -14,26 +14,34 @@ let mapNumber = function (input, inMin, inMax, outMin, outMax) {
 
 
 let indexModule = (function () {
-    let galleryText = document.querySelectorAll('.container-gallery-text');
-    let images = document.querySelectorAll('.image');
-    const order = [
-        [4, 2, 5, 3, 1],
-        [1, 4, 2, 5, 3],
-        [3, 1, 4, 2, 5],
-        [5, 3, 1, 4, 2],
-        [2, 5, 3, 1, 4],
-    ]; // couldn't get this to work programmatically, shifting mutated the const array
 
-    let galleryHover = function (e) {
-        let id = parseInt(e.target.querySelector('.text').id.slice(-1));
-        for (let i = 0; i < images.length; i++) {
-            images[i].src = `/images/gallery0${order[id-1][i]}.jpg`;
+    let initiate = function () {
+        let galleryText = document.querySelectorAll('.container-gallery-text');
+        let images = document.querySelectorAll('.image');
+        const order = [
+            [4, 2, 5, 3, 1],
+            [1, 4, 2, 5, 3],
+            [3, 1, 4, 2, 5],
+            [5, 3, 1, 4, 2],
+            [2, 5, 3, 1, 4],
+        ]; // couldn't get this to work programmatically, shifting mutated the const array
+
+        let galleryHover = function (e) {
+            let id = parseInt(e.target.querySelector('.text').id.slice(-1));
+            for (let i = 0; i < images.length; i++) {
+                images[i].src = `/images/gallery0${order[id-1][i]}.jpg`;
+            }
+        };
+
+        for (let i = 0; i < galleryText.length; i++) {
+            galleryText[i].addEventListener('mouseenter', galleryHover, false);
         }
     };
 
-    for (let i = 0; i < galleryText.length; i++) {
-        galleryText[i].addEventListener('mouseenter', galleryHover, false);
+    return {
+        initiate: initiate
     }
+
 })();
 
 let scrollModule = (function () {
@@ -119,6 +127,10 @@ let scrollModule = (function () {
         }
     };
 
+    let getCurrentSite = function () {
+        return currentSite;
+    };
+
     if (currentSite === 3) {
         window.addEventListener('scroll', scroll, {passive: false});
     } else {
@@ -129,7 +141,8 @@ let scrollModule = (function () {
     initiateScrollBar();
 
     return {
-        initiateScrollBar: initiateScrollBar
+        initiateScrollBar: initiateScrollBar,
+        getCurrentSite: getCurrentSite
     }
 
 })();
@@ -226,17 +239,23 @@ let reusabilityModule = (function () {
         }
     };
 
-    fetch('https://api.spacexdata.com/v3/cores')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function (json) {
-            cores = json.slice(-6);
-            createModal();
-        })
-        .catch(function (errors) {
-            console.log(errors);
-        });
+    let initiate = function () {
+        fetch('https://api.spacexdata.com/v3/cores')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function (json) {
+                cores = json.slice(-6); // only getting the last 6, could be changed into all with a gallery section instead
+                createModal();
+            })
+            .catch(function (errors) {
+                console.log(errors);
+            });
+    };
+
+    return {
+        initiate: initiate
+    }
 
 })();
 
@@ -605,17 +624,24 @@ let rocketModule = (function () {
         }
     };
 
-    fetch('https://api.spacexdata.com/v3/rockets')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function (json) {
-            rockets = json;
-            createCards();
-        })
-        .catch(function (errors) {
-            console.log(errors);
-        });
+    let initiate = function () {
+        fetch('https://api.spacexdata.com/v3/rockets')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function (json) {
+                rockets = json;
+                createCards();
+            })
+            .catch(function (errors) {
+                console.log(errors);
+            });
+    };
+
+    return {
+        initiate: initiate
+    }
+
 })();
 
 let missionModule = (function () {
@@ -738,21 +764,35 @@ let missionModule = (function () {
         }
     };
 
+    let initiate = function () {
+        fetch('https://api.spacexdata.com/v3/launches')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function (json) {
+                missions = json;
+                // console.table(missions);
+                createMissions();
+            })
+            .catch(function (errors) {
+                console.log(errors);
+            });
+    };
 
-    fetch('https://api.spacexdata.com/v3/launches')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function (json) {
-            missions = json;
-            // console.table(missions);
-            createMissions();
-        })
-        .catch(function (errors) {
-            console.log(errors);
-        });
+    return {
+        initiate: initiate
+    }
+
 })();
 
 
-
+if (scrollModule.getCurrentSite() === 0) {
+    indexModule.initiate();
+} else if (scrollModule.getCurrentSite() === 1) {
+    reusabilityModule.initiate();
+} else if (scrollModule.getCurrentSite() === 2) {
+    rocketModule.initiate();
+} else if (scrollModule.getCurrentSite() === 3) {
+    missionModule.initiate();
+}
 

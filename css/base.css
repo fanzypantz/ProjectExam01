@@ -511,6 +511,8 @@ header .nav .nav-element.active h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: url(/images/header01.jpg) no-repeat center center;
+  background-size: cover;
 }
 #cores .rocket-card:hover {
   cursor: pointer;
@@ -518,14 +520,14 @@ header .nav .nav-element.active h2 {
 #cores .falcon-cores {
   background-color: white;
   box-shadow: 0 0 15px black;
-  width: 60%;
+  width: 35%;
   margin: 20px auto;
   text-align: center;
 }
 #cores .cores-row {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 35%;
   margin: 0 auto;
   height: 300px;
 }

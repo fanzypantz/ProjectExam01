@@ -101,7 +101,7 @@
 
 </section>
 
-<section id="cores" class="container-normal">
+<section id="cores" class="one-page">
     <div class="cores-row">
         <div id="core-1" class="core-card">
             <img src="/images/crs-17.jpg" alt="core from the crs-17 mission">
