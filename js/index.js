@@ -7,12 +7,10 @@ const order = [
     [3, 1, 4, 2, 5],
     [5, 3, 1, 4, 2],
     [2, 5, 3, 1, 4],
-]; // couldn't get this to work programmatically, it always mutated this array regardless
+]; // couldn't get this to work programmatically, shifting mutated the const array
 
 let galleryHover = function (e) {
-    let element = e.target;
-    let id = parseInt(element.querySelector('.text').id.slice(-1));
-
+    let id = parseInt(e.target.querySelector('.text').id.slice(-1));
     for (let i = 0; i < images.length; i++) {
         images[i].src = `/images/gallery0${order[id-1][i]}.jpg`;
     }

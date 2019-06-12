@@ -512,6 +512,9 @@ header .nav .nav-element.active h2 {
   justify-content: center;
   align-items: center;
 }
+#cores .rocket-card:hover {
+  cursor: pointer;
+}
 #cores .falcon-cores {
   background-color: white;
   box-shadow: 0 0 15px black;
@@ -530,6 +533,9 @@ header .nav .nav-element.active h2 {
   width: 200px;
   height: 300px;
   position: relative;
+}
+#cores .cores-row .core-card:hover {
+  cursor: pointer;
 }
 #cores .cores-row .core-card .link-text {
   text-align: center;
@@ -728,6 +734,29 @@ header .nav .nav-element.active h2 {
   height: auto;
   margin-top: 40px;
 }
+#missions .mission-column {
+  display: flex;
+  justify-content: center;
+}
+#missions .mission-details {
+  width: 60%;
+}
+#missions .mission-heading {
+  position: relative;
+  margin: 20px 0;
+}
+#missions .mission-heading .patch {
+  position: absolute;
+  top: 0;
+  left: 4%;
+  height: 55px;
+}
+#missions .mission-heading .mission-name {
+  text-align: center;
+  font-family: letter-gothic-std, monospace;
+  font-weight: 600;
+  font-style: normal;
+}
 #missions .container-mission {
   width: 100%;
   background-color: black;
@@ -736,33 +765,33 @@ header .nav .nav-element.active h2 {
   color: white;
   margin: 20px auto;
 }
-#missions .container-mission .mission-name {
-  text-align: center;
-  font-family: letter-gothic-std, monospace;
-  font-weight: 600;
-  font-style: normal;
-}
 #missions .container-mission .mission-description {
-  margin: 20px 40px;
+  margin: 20px 0;
 }
 #missions .container-mission .mission-title {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  margin: 0 40px;
+  width: 100%;
 }
-#missions .container-mission .mission-title .container-title {
+#missions .container-mission .container-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  width: 48%;
   border-bottom: 2px solid white;
+  margin: 10px 0;
 }
-#missions .container-mission .mission-title .container-title p {
+#missions .container-mission .container-title p {
   margin: 0;
 }
-#missions .container-mission .mission-title .container-title:nth-of-type(2) {
-  margin: 0 40px;
+#missions .mission-payloads {
+  width: 30%;
+  margin-left: 40px;
+}
+#missions .mission-payloads .container-title {
+  width: 100%;
 }
 
 /* Media Queries Section */

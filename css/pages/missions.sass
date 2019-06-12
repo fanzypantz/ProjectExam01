@@ -12,6 +12,29 @@
   height: auto
   margin-top: 40px
 
+  .mission-column
+    display: flex
+    justify-content: center
+
+  .mission-details
+    width: 60%
+
+  .mission-heading
+    position: relative
+    margin: 20px 0
+
+    .patch
+      position: absolute
+      top: 0
+      left: 4%
+      height: 55px
+
+    .mission-name
+      text-align: center
+      font-family: letter-gothic-std, monospace
+      font-weight: 600
+      font-style: normal
+
   .container-mission
     width: 100%
     background-color: black
@@ -20,30 +43,32 @@
     color: white
     margin: 20px auto
 
-    .mission-name
-      text-align: center
-      font-family: letter-gothic-std, monospace
-      font-weight: 600
-      font-style: normal
+
 
     .mission-description
-      margin: 20px 40px
+      margin: 20px 0
 
     .mission-title
       display: flex
       justify-content: space-between
+      flex-wrap: wrap
       align-items: center
-      margin: 0 40px
+      width: 100%
 
-      .container-title
-        display: flex
-        justify-content: space-between
-        align-items: center
-        width: 30%
-        border-bottom: 2px solid white
+    .container-title
+      display: flex
+      justify-content: space-between
+      align-items: center
+      width: 48%
+      border-bottom: 2px solid white
+      margin: 10px 0
 
-        p
-          margin: 0
+      p
+        margin: 0
 
-        &:nth-of-type(2)
-          margin: 0 40px
+  .mission-payloads
+    width: 30%
+    margin-left: 40px
+
+    .container-title
+      width: 100%

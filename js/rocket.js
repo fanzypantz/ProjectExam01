@@ -3,13 +3,7 @@ let rockets = null;
 let showingText = false;
 
 
-let boolToText = function (input) {
-    if (input) {
-        return "Yes"
-    } else {
-        return "No"
-    }
-};
+
 
 let createCards = function () {
     for (let i = 0; i < rockets.length - 1; i++) {

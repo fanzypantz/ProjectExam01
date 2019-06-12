@@ -4,8 +4,6 @@
 
 <section id="header-reusability" class="one-page">
 
-
-
 </section>
 
 <section id="reflight-gallery" class="container-normal">
@@ -105,22 +103,22 @@
 
 <section id="cores" class="container-normal">
     <div class="cores-row">
-        <div class="core-card">
+        <div id="core-1" class="core-card">
             <img src="/images/crs-17.jpg" alt="core from the crs-17 mission">
             <div class="link-text">
-                <h3>CRS-17</h3>
+                <h3 class="core-title">CRS-17</h3>
             </div>
         </div>
-        <div class="core-card">
+        <div id="core-2" class="core-card">
             <img src="/images/crs-17.jpg" alt="core from the crs-17 mission">
             <div class="link-text">
-                <h3>CRS-17</h3>
+                <h3 class="core-title">CRS-17</h3>
             </div>
         </div>
-        <div class="core-card">
+        <div  id="core-3" class="core-card">
             <img src="/images/crs-17.jpg" alt="core from the crs-17 mission">
             <div class="link-text">
-                <h3>CRS-17</h3>
+                <h3 class="core-title">CRS-17</h3>
             </div>
         </div>
     </div>
@@ -130,22 +128,22 @@
     </div>
 
     <div class="cores-row">
-        <div class="core-card">
+        <div  id="core-4" class="core-card">
             <img src="/images/crs-17.jpg" alt="core from the crs-17 mission">
             <div class="link-text">
-                <h3>CRS-17</h3>
+                <h3 class="core-title">CRS-17</h3>
             </div>
         </div>
-        <div class="core-card">
+        <div  id="core-5" class="core-card">
             <img src="/images/crs-17.jpg" alt="core from the crs-17 mission">
             <div class="link-text">
-                <h3>CRS-17</h3>
+                <h3 class="core-title">CRS-17</h3>
             </div>
         </div>
-        <div class="core-card">
+        <div  id="core-6" class="core-card">
             <img src="/images/crs-17.jpg" alt="core from the crs-17 mission">
             <div class="link-text">
-                <h3>CRS-17</h3>
+                <h3 class="core-title">CRS-17</h3>
             </div>
         </div>
     </div>
@@ -159,5 +157,8 @@
         </div>
     </div>
 </section>
+
+<script type="text/javascript" src="/js/reusability.js"></script>
+
 
 <?php endblock() ?>

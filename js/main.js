@@ -26,6 +26,14 @@ if (currentTitle === "Letha - Space Exploration Technologies") {
     currentSite = 3;
 }
 
+let boolToText = function (input) {
+    if (input) {
+        return "Yes"
+    } else {
+        return "No"
+    }
+};
+
 let mapNumber = function (input, inMin, inMax, outMin, outMax) {
     return (input - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 };
