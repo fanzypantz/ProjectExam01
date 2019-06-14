@@ -140,14 +140,10 @@
 <section id="business" class="container-normal">
     <div class="column">
         <h1 id="dreams">Relive your dreams</h1>
-        <div>
-            <img src="/images/business01.jpg" alt="man looking at planning board">
-        </div>
+        <img src="/images/business01.jpg" alt="man looking at planning board">
     </div>
     <div class="column">
-        <div>
-            <img src="/images/elon_musk.jpg" alt="elon musk">
-        </div>
+        <img src="/images/elon_musk.jpg" alt="elon musk">
         <h1 id="jobs">Available Jobs</h1>
         <a class="career-button" href="https://www.spacex.com/careers" target="_blank">Career</a>
     </div>

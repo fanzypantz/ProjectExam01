@@ -86,19 +86,6 @@
         </div>
     </div>
 
-    <div id="reflight-07" class="card">
-        <img class="image" src="/images/reflight07.jpg" alt="">
-        <div class="link-text">
-            <h3>Initial Launch</h3>
-        </div>
-        <div class="card-desc noHover">
-            <p class="title">INITIAL LAUNCH OF REFLOWN ROCKET FROM CAPE CANAVERAL</p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-        </div>
-    </div>
-
 </section>
 
 <section id="cores" class="one-page">

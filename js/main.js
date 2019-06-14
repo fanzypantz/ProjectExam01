@@ -73,6 +73,12 @@ let scrollModule = (function () {
 
     // Set the height of the scrollbar based on height of the document.
     let initiateScrollBar = function () {
+        if (currentSite === 3) {
+            window.addEventListener('scroll', scroll, {passive: false});
+        } else {
+            window.addEventListener('wheel', scrollFunction, {passive: false});
+        }
+
         if (currentSite !== 3) {
             document.querySelector('#scroll').style.height = 1000 / (documentHeight / 1000) + "px";
             document.getElementsByTagName('body')[0].style.overflowY = "hidden";
@@ -131,14 +137,7 @@ let scrollModule = (function () {
         return currentSite;
     };
 
-    if (currentSite === 3) {
-        window.addEventListener('scroll', scroll, {passive: false});
-    } else {
-        window.addEventListener('wheel', scrollFunction, {passive: false});
-    }
-
     // window.addEventListener("touchmove", scrollFunction, {passive: false});
-    initiateScrollBar();
 
     return {
         initiateScrollBar: initiateScrollBar,
@@ -203,8 +202,9 @@ let reusabilityModule = (function () {
         let targetName = event.target.parentElement.querySelector('.core-title').innerHTML;
         let target = document.querySelector(`#${targetName}-modal`);
 
-        target.style.top = event.clientY + 'px';
-        target.style.left = (event.clientX + 50) + 'px';
+        // target.style.top = event.clientY + 'px';
+        // target.style.left = (event.clientX + 50) + 'px';
+        target.style.display = 'block'
         target.style.opacity = '1';
     };
 
@@ -221,8 +221,7 @@ let reusabilityModule = (function () {
         }
         target.style.opacity = '0';
         setTimeout(function () {
-            target.style.top = '0';
-            target.style.left = '0';
+            target.style.display = 'none';
         }, 100)
     };
 
@@ -785,6 +784,7 @@ let missionModule = (function () {
 
 })();
 
+// scrollModule.initiateScrollBar();
 
 if (scrollModule.getCurrentSite() === 0) {
     indexModule.initiate();

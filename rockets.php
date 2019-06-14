@@ -35,7 +35,7 @@
 
 </section>
 
-<section id="falcon-heavy" class="container-normal">
+<section id="falcon-heavy" class="one-page">
 
     <div id="falcon-9-heavy" class="rocket">
         <img id="falcon-heavy-third" class="rocket-part" src="/images/svg/third_stage.svg" alt="">

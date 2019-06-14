@@ -1,4 +1,275 @@
 /* Media Queries Section */
+@media only screen and (max-width: 1440px) // Large
+  #cores
+    .cores-row, .falcon-cores
+      width: 48%
 
-@media only screen and (max-width: 1200px)
+@media only screen and (max-width: 1348px)
+  .gallery
 
+    .images
+      transform: scale(0.8) translateY(-50%)
+
+    .description
+      right:  -17%
+      .container-gallery-text
+        width: 600px
+
+        .line
+          width: 150px
+
+@media only screen and (max-width: 1024px) // Laptop
+
+  #reflight-02
+    left: 38%
+
+  #reflight-03
+    left: -5%
+
+  #reflight-04
+    left: 5%
+
+  #reflight-05
+    left: 23%
+
+  #reflight-06
+    left: 44%
+
+  #reflight-07
+    left: 42%
+
+
+  #first-landing .youtube
+    width: 100%
+
+  #cores
+    .cores-row, .falcon-cores
+      width: 65%
+
+  .slogan
+    width: 60%
+
+  header
+    .nav
+      width: 140px
+
+  .gallery
+
+    .images
+      transform: scale(0.8, 0.8) translateY(-50%)
+      left: -7%
+
+    .description
+      right:  -7%
+      .container-gallery-text
+        width: 400px
+
+        .text
+          font-size: 0.9em
+
+        .line
+          width: 90px
+          p
+            margin-left: 10px
+
+  .link-text h3
+    margin: 0 10px
+    font-size:  20px
+
+@media only screen and (max-width: 844px)
+
+  #reflight-02
+    left: 30%
+
+  #reflight-03
+    left: -5%
+
+  #reflight-04
+    left: -12%
+
+  #reflight-05
+    left: 14%
+
+  #reflight-06
+    left: 21%
+
+  #reflight-07
+    left: 26%
+
+@media only screen and (max-width: 768px) // Tablet
+
+  #reflight-gallery
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+
+    .card
+      width: calc(90% / 3)
+      height:  40%
+      position: static
+      top: unset
+      left: unset
+      transform: unset
+
+      .card-desc
+        width: 260px
+        height: 200px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+      .link-text
+        width: 300px
+        height: 40px
+        top: 30%
+        left: 50%
+        transform: translateX(-50%)
+
+      img
+        height: 100%
+        width: 100%
+        object-fit: cover
+        object-position: 50% 50%
+
+  #cores
+    .cores-row, .falcon-cores
+      width: 90%
+
+
+  .slogan
+    width: 80%
+
+  header
+    .scrollbar
+      width: 6px
+      opacity: 0.5
+
+    .container-logo
+      left: 50%
+      transform: translateX(-50%)
+
+      svg
+        width: 100%
+
+  .history .reflight
+    h3
+      width: 50%
+    svg
+      display: none
+
+  .bg-main
+    width: 100%
+
+  .nav
+    display: none
+
+  .container-normal
+    width: 90%
+
+  #business .column
+    min-width: auto
+    width: 50%
+    margin: 10px
+
+    img
+      height: 70%
+
+    h1
+      font-size: 2em
+
+  .gallery
+
+    .images
+      width: 80%
+      height: 50%
+      position: absolute
+      left: 50%
+      top: 7%
+      transform: translateX(-50%)
+
+      .image
+        display: none
+
+      #img-05
+        width: 100%
+        height: 100%
+        display: block
+        transform: unset
+
+    .description
+      position: absolute
+      right: 50%
+      top: unset
+      bottom: 8%
+      width: 80%
+      transform: translateX(50%)
+
+      .container-gallery-text
+        width: 100%
+
+        .line
+          display: none
+
+
+  #index-cta
+    img
+      object-position: 50% 50%
+
+    #core-hangar img
+      object-position: 70% 50%
+
+@media only screen and (max-width: 425px) // Mobile Large
+
+  #cores .rocket-card
+    //width: 270px
+
+    .rocket-info
+      width: 270px
+
+  .history .text
+    font-size: 1em
+
+  #business
+    flex-direction: column
+
+    .column
+      width: 100%
+      margin: 10px 0
+      justify-content: center
+
+      h1
+        margin: 10px 0
+
+      img
+        object-fit: cover
+        object-position: 50% 10%
+        height: 60%
+
+  #index-cta
+    #dragon-space
+      margin: 0
+      height: calc(90% / 3)
+
+    #two-row-dragon
+      flex-direction: column
+      height: calc((90% / 3) * 2)
+
+      #landing, #core-hangar
+        width: 100%
+        height: 50%
+        margin: 0
+
+  .gallery
+    .images
+      width: 100%
+    .description
+      width: 100%
+      bottom: 5%
+
+@media only screen and (max-width: 320px)
+
+  header .container-logo
+    width: 90%
+    h1
+      font-size: 3.5em

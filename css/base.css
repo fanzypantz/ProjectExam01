@@ -56,6 +56,7 @@ header .scrollbar {
   left: 5%;
   transform: translateY(-50%);
   border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.51);
 }
 header .scrollbar .scroll {
   position: absolute;
@@ -72,6 +73,7 @@ header .nav {
   top: 50%;
   width: 175px;
   transform: translateY(-50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.51);
 }
 header .nav .nav-element {
   background-color: white;
@@ -371,9 +373,6 @@ header .nav .nav-element.active h2 {
 #index-cta #two-row-dragon #landing {
   margin-right: 10px;
 }
-#index-cta #two-row-dragon #core-hangar {
-  margin-right: 10px;
-}
 #index-cta img {
   width: 100%;
   height: 100%;
@@ -391,14 +390,17 @@ header .nav .nav-element.active h2 {
   flex-direction: column;
   justify-content: space-between;
   height: 700px;
-  width: 260px;
+  width: 22%;
+  min-width: 248px;
   margin: 50px;
 }
 #business .column #dreams, #business .column #jobs {
   border-bottom: 5px solid black;
 }
 #business .column img {
+  height: 50%;
   width: 100%;
+  object-fit: cover;
 }
 #business .column .career-button {
   width: 100%;
@@ -439,6 +441,7 @@ header .nav .nav-element.active h2 {
   width: 350px;
   height: 233px;
   position: absolute;
+  transition: transform 250ms ease-in-out;
 }
 #reflight-gallery .card:hover {
   z-index: 100;
@@ -472,8 +475,8 @@ header .nav .nav-element.active h2 {
 
 #reflight-02 {
   z-index: 98;
-  top: 56%;
-  left: 36%;
+  top: 51%;
+  left: 42%;
 }
 
 #reflight-03 {
@@ -511,8 +514,14 @@ header .nav .nav-element.active h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(/images/header01.jpg) no-repeat center center;
+  background: url(/images/header06.jpg) no-repeat center center;
   background-size: cover;
+}
+#cores .rocket-card {
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 #cores .rocket-card:hover {
   cursor: pointer;
@@ -544,6 +553,9 @@ header .nav .nav-element.active h2 {
 }
 #cores .cores-row .core-card img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 #first-landing {
@@ -650,6 +662,11 @@ header .nav .nav-element.active h2 {
   justify-content: center;
   align-items: center;
   position: relative;
+  background: url(/images/header05.jpg) no-repeat center center;
+  background-size: cover;
+}
+#falcon-heavy #falcon-heavy-main {
+  left: 20%;
 }
 #falcon-heavy .rocket {
   display: flex;
@@ -665,12 +682,12 @@ header .nav .nav-element.active h2 {
 }
 #falcon-heavy #falcon-heavy-landing {
   z-index: 4;
-  transform: scale(2.7) translate(1px, 53px);
+  transform: scale(2.63) translate(0, 53px);
   height: 45px;
 }
 #falcon-heavy #falcon-heavy-engine {
   z-index: 3;
-  transform: scale(2.39) translateY(77px);
+  transform: scale(2.39) translateY(76px);
   height: 10px;
 }
 #falcon-heavy #falcon-heavy-upper {
@@ -810,5 +827,297 @@ header .nav .nav-element.active h2 {
 }
 
 /* Media Queries Section */
+@media only screen and (max-width: 1440px) {
+  #cores .cores-row, #cores .falcon-cores {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 1348px) {
+  .gallery .images {
+    transform: scale(0.8) translateY(-50%);
+  }
+  .gallery .description {
+    right: -17%;
+  }
+  .gallery .description .container-gallery-text {
+    width: 600px;
+  }
+  .gallery .description .container-gallery-text .line {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #reflight-02 {
+    left: 38%;
+  }
+
+  #reflight-03 {
+    left: -5%;
+  }
+
+  #reflight-04 {
+    left: 5%;
+  }
+
+  #reflight-05 {
+    left: 23%;
+  }
+
+  #reflight-06 {
+    left: 44%;
+  }
+
+  #reflight-07 {
+    left: 42%;
+  }
+
+  #first-landing .youtube {
+    width: 100%;
+  }
+
+  #cores .cores-row, #cores .falcon-cores {
+    width: 65%;
+  }
+
+  .slogan {
+    width: 60%;
+  }
+
+  header .nav {
+    width: 140px;
+  }
+
+  .gallery .images {
+    transform: scale(0.8, 0.8) translateY(-50%);
+    left: -7%;
+  }
+  .gallery .description {
+    right: -7%;
+  }
+  .gallery .description .container-gallery-text {
+    width: 400px;
+  }
+  .gallery .description .container-gallery-text .text {
+    font-size: 0.9em;
+  }
+  .gallery .description .container-gallery-text .line {
+    width: 90px;
+  }
+  .gallery .description .container-gallery-text .line p {
+    margin-left: 10px;
+  }
+
+  .link-text h3 {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 844px) {
+  #reflight-02 {
+    left: 30%;
+  }
+
+  #reflight-03 {
+    left: -5%;
+  }
+
+  #reflight-04 {
+    left: -12%;
+  }
+
+  #reflight-05 {
+    left: 14%;
+  }
+
+  #reflight-06 {
+    left: 21%;
+  }
+
+  #reflight-07 {
+    left: 26%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #reflight-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #reflight-gallery .card {
+    width: calc(90% / 3);
+    height: 40%;
+    position: static;
+    top: unset;
+    left: unset;
+    transform: unset;
+  }
+  #reflight-gallery .card .card-desc {
+    width: 260px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #reflight-gallery .card .link-text {
+    width: 300px;
+    height: 40px;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #reflight-gallery .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  #cores .cores-row, #cores .falcon-cores {
+    width: 90%;
+  }
+
+  .slogan {
+    width: 80%;
+  }
+
+  header .scrollbar {
+    width: 6px;
+    opacity: 0.5;
+  }
+  header .container-logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  header .container-logo svg {
+    width: 100%;
+  }
+
+  .history .reflight h3 {
+    width: 50%;
+  }
+  .history .reflight svg {
+    display: none;
+  }
+
+  .bg-main {
+    width: 100%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .container-normal {
+    width: 90%;
+  }
+
+  #business .column {
+    min-width: auto;
+    width: 50%;
+    margin: 10px;
+  }
+  #business .column img {
+    height: 70%;
+  }
+  #business .column h1 {
+    font-size: 2em;
+  }
+
+  .gallery .images {
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 7%;
+    transform: translateX(-50%);
+  }
+  .gallery .images .image {
+    display: none;
+  }
+  .gallery .images #img-05 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: unset;
+  }
+  .gallery .description {
+    position: absolute;
+    right: 50%;
+    top: unset;
+    bottom: 8%;
+    width: 80%;
+    transform: translateX(50%);
+  }
+  .gallery .description .container-gallery-text {
+    width: 100%;
+  }
+  .gallery .description .container-gallery-text .line {
+    display: none;
+  }
+
+  #index-cta img {
+    object-position: 50% 50%;
+  }
+  #index-cta #core-hangar img {
+    object-position: 70% 50%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  #cores .rocket-card .rocket-info {
+    width: 270px;
+  }
+
+  .history .text {
+    font-size: 1em;
+  }
+
+  #business {
+    flex-direction: column;
+  }
+  #business .column {
+    width: 100%;
+    margin: 10px 0;
+    justify-content: center;
+  }
+  #business .column h1 {
+    margin: 10px 0;
+  }
+  #business .column img {
+    object-fit: cover;
+    object-position: 50% 10%;
+    height: 60%;
+  }
+
+  #index-cta #dragon-space {
+    margin: 0;
+    height: calc(90% / 3);
+  }
+  #index-cta #two-row-dragon {
+    flex-direction: column;
+    height: calc((90% / 3) * 2);
+  }
+  #index-cta #two-row-dragon #landing, #index-cta #two-row-dragon #core-hangar {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+  }
+
+  .gallery .images {
+    width: 100%;
+  }
+  .gallery .description {
+    width: 100%;
+    bottom: 5%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  header .container-logo {
+    width: 90%;
+  }
+  header .container-logo h1 {
+    font-size: 3.5em;
+  }
+}
 
 /*# sourceMappingURL=base.css.map */
