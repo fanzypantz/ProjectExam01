@@ -1,19 +1,19 @@
 
 <?php
 switch ($_SERVER["SCRIPT_NAME"]) {
-    case "/missions.php":
+    case "/missions.html":
         $CURRENT_PAGE = "Missions";
         $PAGE_TITLE = "Missions";
         $KEYWORDS = "";
         $DESCRIPTION = "";
         break;
-    case "/reusability.php":
+    case "/reusability.html":
         $CURRENT_PAGE = "Reusability";
         $PAGE_TITLE = "Reusability";
         $KEYWORDS = "";
         $DESCRIPTION = "";
         break;
-    case "/rockets.php":
+    case "/rockets.html":
         $CURRENT_PAGE = "Rockets";
         $PAGE_TITLE = "Rockets";
         $KEYWORDS = "";
