@@ -784,7 +784,33 @@ let missionModule = (function () {
 
 })();
 
-// scrollModule.initiateScrollBar();
+let mobileModule = (function () {
+    let toggleMenu = function (e) {
+        let nav = document.querySelector('.nav');
+        if (nav.style.display === 'none') {
+            nav.style.display = 'block';
+            nav.style.opacity = '1';
+        } else {
+            nav.style.opacity = '0';
+            setTimeout(function () {
+                nav.style.display = 'none';
+            }, 500)
+        }
+    };
+
+    let initiate = function () {
+        document.querySelector('.mobile-menu').addEventListener('click', toggleMenu, false);
+        document.querySelector('.nav').style.display = 'none';
+    };
+
+    return {
+        initiate: initiate
+    }
+
+})();
+
+scrollModule.initiateScrollBar();
+mobileModule.initiate();
 
 if (scrollModule.getCurrentSite() === 0) {
     indexModule.initiate();
