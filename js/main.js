@@ -29,7 +29,7 @@ let indexModule = (function () {
         let galleryHover = function (e) {
             let id = parseInt(e.target.querySelector('.text').id.slice(-1));
             for (let i = 0; i < images.length; i++) {
-                images[i].src = `/images/gallery0${order[id-1][i]}.jpg`;
+                images[i].src = `../images/gallery0${order[id-1][i]}.jpg`;
             }
         };
 
@@ -787,7 +787,7 @@ let missionModule = (function () {
 let mobileModule = (function () {
     let toggleMenu = function (e) {
         let nav = document.querySelector('.nav');
-        if (nav.style.display === 'none') {
+        if (window.getComputedStyle(nav).display === 'none') {
             nav.style.display = 'block';
             nav.style.opacity = '1';
         } else {
@@ -800,7 +800,6 @@ let mobileModule = (function () {
 
     let initiate = function () {
         document.querySelector('.mobile-menu').addEventListener('click', toggleMenu, false);
-        document.querySelector('.nav').style.display = 'none';
     };
 
     return {

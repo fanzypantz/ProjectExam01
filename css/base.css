@@ -81,6 +81,7 @@ header .scrollbar .scroll {
   border-radius: 5px;
 }
 header .nav {
+  display: block;
   position: fixed;
   right: 0;
   top: 50%;
@@ -178,22 +179,22 @@ header .nav .nav-element.active h2 {
 
 /* Index Section */
 #header-index {
-  background: url(/images/header01.jpg) no-repeat center center;
+  background: url(../images/header01.jpg) no-repeat center center;
   background-size: cover;
 }
 
 #hero01 {
-  background: url(/images/hero01.jpg) no-repeat center center;
+  background: url(../images/hero01.jpg) no-repeat center center;
   background-size: cover;
 }
 
 #hero02 {
-  background: url(/images/hero02.jpg) no-repeat center center;
+  background: url(../images/hero02.jpg) no-repeat center center;
   background-size: cover;
 }
 
 #hero03 {
-  background: url(/images/hero03.jpg) no-repeat center center;
+  background: url(../images/hero03.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -440,7 +441,7 @@ header .nav .nav-element.active h2 {
 
 /* Reusability Section */
 #header-reusability {
-  background: url(/images/header02.jpg) no-repeat center center;
+  background: url(../images/header02.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -529,7 +530,7 @@ header .nav .nav-element.active h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(/images/header06.jpg) no-repeat center center;
+  background: url(../images/header06.jpg) no-repeat center center;
   background-size: cover;
 }
 #cores .rocket-card {
@@ -594,7 +595,7 @@ header .nav .nav-element.active h2 {
 
 /* Rockets Section */
 #header-rockets {
-  background: url(/images/header03.jpg) no-repeat center center;
+  background: url(../images/header03.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -677,7 +678,7 @@ header .nav .nav-element.active h2 {
   justify-content: center;
   align-items: center;
   position: relative;
-  background: url(/images/header05.jpg) no-repeat center center;
+  background: url(../images/header05.jpg) no-repeat center center;
   background-size: cover;
 }
 #falcon-heavy #falcon-heavy-main {
@@ -759,7 +760,7 @@ header .nav .nav-element.active h2 {
 
 /* Missions Section */
 #header-missions {
-  background: url(/images/header04.jpg) no-repeat center center;
+  background: url(../images/header04.jpg) no-repeat center center;
   background-size: cover;
 }
 
