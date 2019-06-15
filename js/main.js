@@ -109,14 +109,11 @@ let scrollModule = (function () {
     };
 
     let touchStart = function (e) {
-        console.log('touchStart', e.touches[0].clientY);
         touchStartY = e.touches[0].clientY;
     };
 
     let touchEnd = function (e) {
-        console.log('touchend', e.changedTouches[0].clientY);
         let difference = touchStartY - e.changedTouches[0].clientY;
-        console.log('difference', difference);
         if (difference > 100) {
             touchDirection = 1;
             scrollFunction(e);
@@ -126,9 +123,6 @@ let scrollModule = (function () {
         } else {
             touchDirection = 0;
         }
-
-        console.log('direction', touchDirection);
-
     };
 
 
@@ -137,9 +131,6 @@ let scrollModule = (function () {
         if (e !== undefined) {
             e.preventDefault();
         }
-
-        console.log(currentFocus);
-
         let forward = function () {
             let focus = document.querySelector(scrollNames[currentSite][currentFocus + 1]);
             currentFocus = currentFocus + 1;
@@ -152,12 +143,10 @@ let scrollModule = (function () {
             return focus;
         };
 
-
         if (!isScrolling && currentFocus >= 0 ) {
             let nextElement = null;
 
             if (e.deltaY !== undefined && e.deltaY !== 0) {
-                console.log('has deltaY');
                 if (e.deltaY > 0 && currentFocus < (scrollNames[currentSite].length - 1)) {
                     nextElement = forward();
                 } else if ( e.deltaY < 0 && currentFocus > 0 ) {
@@ -167,9 +156,9 @@ let scrollModule = (function () {
                 }
             } else {
                 if (touchDirection === -1 && currentFocus < (scrollNames[currentSite].length - 1)) {
-                    nextElement = forward();
-                } else if (touchDirection === 1 && currentFocus > 0) {
                     nextElement = backwards();
+                } else if (touchDirection === 1 && currentFocus > 0) {
+                    nextElement = forward();
                 } else {
                     return false;
                 }
@@ -860,7 +849,7 @@ let mobileModule = (function () {
 
 })();
 
-scrollModule.initiateScrollBar();
+// scrollModule.initiateScrollBar();
 mobileModule.initiate();
 
 if (scrollModule.getCurrentSite() === 0) {

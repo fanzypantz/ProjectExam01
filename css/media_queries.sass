@@ -202,11 +202,18 @@
       svg
         width: 100%
 
-  .history .reflight
-    h3
-      width: 50%
-    svg
-      display: none
+  .history
+    .hangar
+      margin-top: 0 !important
+
+    .text
+      font-size: 1.2em
+
+    .reflight
+      h3
+        width: 50%
+      svg
+        display: none
 
   .bg-main
     width: 100%
@@ -328,8 +335,13 @@
     .rocket-info
       width: 270px
 
-  .history .text
-    font-size: 1em
+  .history
+    .reflight
+      margin-top: 0
+    .hangar
+      height: 150px
+    .text
+      font-size: 1em
 
   #business
     flex-direction: column
@@ -368,12 +380,41 @@
       width: 100%
       bottom: 5%
 
-@media only screen and (max-width: 375px)
+@media only screen and (max-width: 375px) // Mobile Medium
 
-  header .container-logo
-    width: 90%
-    h1
-      font-size: 3.5em
+  .slogan .text
+    font-size: 1.5em
+
+  .history
+    h2
+      font-size: 1.8em
+      line-height: 25px
+
+    #history
+      width: 85px
+
+    .reflight h3
+      margin: 10px 0
+      font-size: 1.2em
+
+  header
+    .container-logo
+      width: 80%
+      h1
+        font-size: 2.5em
+
+@media only screen and (max-width: 320px) // Mobile Medium
+
+  .history
+    #history
+      margin-left: 0
+
+  #reflight-gallery .card
+    .link-text
+      width: 100vw
+
+    .card-desc
+      width: calc(100vw - 40px)
 
 
 ///////////////////////////////
@@ -417,6 +458,10 @@
 
 @media only screen and (max-height: 600px)
 
+  .history .hangar
+    margin-top: 0
+    height: 175px
+
   #reflight-gallery .card
     height: 46%
 
@@ -443,6 +488,8 @@
   .history
     .hangar
       margin: 0
+      height: 150px
+
     .text
       font-size: 1em
     .reflight
@@ -464,6 +511,9 @@
 @media only screen and (max-height: 433px)
 
   .history
+    .hangar
+      height: 100px
+
     .text
       line-height: 20px
 
@@ -485,7 +535,63 @@
   #falcon-1-rocket
     transform: scale(0.7) translateY(60px)
 
+@media only screen and (max-height: 390px)
+
+  .gallery
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .images
+      width: 80%
+      height: 50%
+      position: static
+      left: unset
+      top: unset
+      transform: unset
+
+      .image
+        display: none
+        position: static
+        top: unset
+        left: unset
+
+      #img-05
+        width: 100%
+        height: 100%
+        display: block
+        transform: unset
+
+    .description
+      position: static
+      right: unset
+      top: unset
+      bottom: unset
+      width: 80%
+      transform: unset
+
+      .container-gallery-text
+        width: 100%
+
+        .line
+          display: none
+
+  .history
+    h2
+      font-size: 1.5em
+      line-height: 25px
+
+    #history
+      width: 77px
+
+    .reflight h3
+      font-size: 1em
+
 @media only screen and (max-height: 343px)
+
+  .gallery .description .container-gallery-text .text
+    margin: 0 0 0 40px
 
   header .nav
     height: 100vh
@@ -494,10 +600,16 @@
 
   .history
     #history
-      width: 100px
+      width: 70px
 
     h2
-      font-size: 2em
+      font-size: 1.2em
+
+  #business
+    .column
+      height: 20% !important
+      img
+        display: none
 
   #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp
     transform: scale(0.3)

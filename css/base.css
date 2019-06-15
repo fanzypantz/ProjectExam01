@@ -1064,6 +1064,12 @@ header .nav .nav-element.active h2 {
     width: 100%;
   }
 
+  .history .hangar {
+    margin-top: 0 !important;
+  }
+  .history .text {
+    font-size: 1.2em;
+  }
   .history .reflight h3 {
     width: 50%;
   }
@@ -1192,6 +1198,12 @@ header .nav .nav-element.active h2 {
     width: 270px;
   }
 
+  .history .reflight {
+    margin-top: 0;
+  }
+  .history .hangar {
+    height: 150px;
+  }
   .history .text {
     font-size: 1em;
   }
@@ -1236,11 +1248,39 @@ header .nav .nav-element.active h2 {
   }
 }
 @media only screen and (max-width: 375px) {
+  .slogan .text {
+    font-size: 1.5em;
+  }
+
+  .history h2 {
+    font-size: 1.8em;
+    line-height: 25px;
+  }
+  .history #history {
+    width: 85px;
+  }
+  .history .reflight h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+
   header .container-logo {
-    width: 90%;
+    width: 80%;
   }
   header .container-logo h1 {
-    font-size: 3.5em;
+    font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .history #history {
+    margin-left: 0;
+  }
+
+  #reflight-gallery .card .link-text {
+    width: 100vw;
+  }
+  #reflight-gallery .card .card-desc {
+    width: calc(100vw - 40px);
   }
 }
 @media only screen and (max-height: 870px) {
@@ -1284,6 +1324,11 @@ header .nav .nav-element.active h2 {
   }
 }
 @media only screen and (max-height: 600px) {
+  .history .hangar {
+    margin-top: 0;
+    height: 175px;
+  }
+
   #reflight-gallery .card {
     height: 46%;
   }
@@ -1315,6 +1360,7 @@ header .nav .nav-element.active h2 {
 
   .history .hangar {
     margin: 0;
+    height: 150px;
   }
   .history .text {
     font-size: 1em;
@@ -1340,6 +1386,9 @@ header .nav .nav-element.active h2 {
   }
 }
 @media only screen and (max-height: 433px) {
+  .history .hangar {
+    height: 100px;
+  }
   .history .text {
     line-height: 20px;
   }
@@ -1367,7 +1416,64 @@ header .nav .nav-element.active h2 {
     transform: scale(0.7) translateY(60px);
   }
 }
+@media only screen and (max-height: 390px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery .images {
+    width: 80%;
+    height: 50%;
+    position: static;
+    left: unset;
+    top: unset;
+    transform: unset;
+  }
+  .gallery .images .image {
+    display: none;
+    position: static;
+    top: unset;
+    left: unset;
+  }
+  .gallery .images #img-05 {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: unset;
+  }
+  .gallery .description {
+    position: static;
+    right: unset;
+    top: unset;
+    bottom: unset;
+    width: 80%;
+    transform: unset;
+  }
+  .gallery .description .container-gallery-text {
+    width: 100%;
+  }
+  .gallery .description .container-gallery-text .line {
+    display: none;
+  }
+
+  .history h2 {
+    font-size: 1.5em;
+    line-height: 25px;
+  }
+  .history #history {
+    width: 77px;
+  }
+  .history .reflight h3 {
+    font-size: 1em;
+  }
+}
 @media only screen and (max-height: 343px) {
+  .gallery .description .container-gallery-text .text {
+    margin: 0 0 0 40px;
+  }
+
   header .nav {
     height: 100vh;
   }
@@ -1376,10 +1482,17 @@ header .nav .nav-element.active h2 {
   }
 
   .history #history {
-    width: 100px;
+    width: 70px;
   }
   .history h2 {
-    font-size: 2em;
+    font-size: 1.2em;
+  }
+
+  #business .column {
+    height: 20% !important;
+  }
+  #business .column img {
+    display: none;
   }
 
   #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp {
