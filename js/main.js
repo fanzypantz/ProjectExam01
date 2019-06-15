@@ -29,7 +29,7 @@ let indexModule = (function () {
         let galleryHover = function (e) {
             let id = parseInt(e.target.querySelector('.text').id.slice(-1));
             for (let i = 0; i < images.length; i++) {
-                images[i].src = `../images/gallery0${order[id-1][i]}.jpg`;
+                images[i].src = `images/gallery0${order[id-1][i]}.jpg`;
             }
         };
 
