@@ -163,14 +163,14 @@
       transform: unset
 
       .card-desc
-        width: 260px
-        height: 200px
-        top: 50%
+        width: 260px !important
+        //height: 200px
+        top: 50% !important
         left: 50%
         transform: translate(-50%, -50%)
 
       .link-text
-        width: 300px
+        width: 300px !important
         height: 40px
         top: 30%
         left: 50%
@@ -431,6 +431,10 @@
 
 
 @media only screen and (max-height: 755px)
+
+  #reflight-gallery .card .card-desc
+    top: 42%
+    width: calc(100% - 40px)
 
   #first-landing .youtube
     height: 50%

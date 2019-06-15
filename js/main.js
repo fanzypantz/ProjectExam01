@@ -849,7 +849,7 @@ let mobileModule = (function () {
 
 })();
 
-// scrollModule.initiateScrollBar();
+scrollModule.initiateScrollBar();
 mobileModule.initiate();
 
 if (scrollModule.getCurrentSite() === 0) {
