@@ -267,7 +267,7 @@ header .nav .nav-element.active h2 {
   font-family: letter-gothic-std, monospace;
   font-weight: 600;
   color: white;
-  text-shadow: 0 2px 2px black;
+  text-shadow: 2px 2px 0 black;
 }
 .slogan .text {
   text-align: center;
