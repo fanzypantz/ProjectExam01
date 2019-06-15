@@ -50,6 +50,8 @@ let scrollModule = (function () {
     let isScrolling = false;
     let documentHeight = Math.max( document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
     let scrollInterval = null;
+    let touchStartY = null;
+    let touchDirection = 0;
 
     // Hardcoded scroll targets. In hindsight it would have been better to just name things better
     let scrollNames = [
@@ -77,6 +79,8 @@ let scrollModule = (function () {
             window.addEventListener('scroll', scroll, {passive: false});
         } else {
             window.addEventListener('wheel', scrollFunction, {passive: false});
+            window.addEventListener("touchstart", touchStart, {passive: false});
+            window.addEventListener("touchend", touchEnd, {passive: false});
         }
 
         if (currentSite !== 3) {
@@ -104,21 +108,71 @@ let scrollModule = (function () {
         clearInterval(scrollInterval);
     };
 
+    let touchStart = function (e) {
+        console.log('touchStart', e.touches[0].clientY);
+        touchStartY = e.touches[0].clientY;
+    };
+
+    let touchEnd = function (e) {
+        console.log('touchend', e.changedTouches[0].clientY);
+        let difference = touchStartY - e.changedTouches[0].clientY;
+        console.log('difference', difference);
+        if (difference > 100) {
+            touchDirection = 1;
+            scrollFunction(e);
+        } else if ( difference < -100) {
+            touchDirection = -1;
+            scrollFunction(e);
+        } else {
+            touchDirection = 0;
+        }
+
+        console.log('direction', touchDirection);
+
+    };
+
+
     // Use scrollIntoView as well as a tick function to scroll page and the custom scrollbar
     let scrollFunction = function (e) {
-        e.preventDefault();
+        if (e !== undefined) {
+            e.preventDefault();
+        }
+
+        console.log(currentFocus);
+
+        let forward = function () {
+            let focus = document.querySelector(scrollNames[currentSite][currentFocus + 1]);
+            currentFocus = currentFocus + 1;
+            return focus;
+        };
+
+        let backwards = function () {
+            let focus = document.querySelector(scrollNames[currentSite][currentFocus - 1]);
+            currentFocus = currentFocus - 1;
+            return focus;
+        };
+
 
         if (!isScrolling && currentFocus >= 0 ) {
             let nextElement = null;
 
-            if (e.deltaY > 0 && currentFocus < (scrollNames[currentSite].length - 1)) {
-                nextElement = document.querySelector(scrollNames[currentSite][currentFocus + 1]);
-                currentFocus = currentFocus + 1;
-            } else if ( e.deltaY < 0 && currentFocus > 0 ) {
-                nextElement = document.querySelector(scrollNames[currentSite][currentFocus - 1]);
-                currentFocus = currentFocus - 1;
+            if (e.deltaY !== undefined && e.deltaY !== 0) {
+                console.log('has deltaY');
+                if (e.deltaY > 0 && currentFocus < (scrollNames[currentSite].length - 1)) {
+                    nextElement = forward();
+                } else if ( e.deltaY < 0 && currentFocus > 0 ) {
+                    nextElement = backwards();
+                } else {
+                    return false;
+                }
             } else {
-                return false;
+                if (touchDirection === -1 && currentFocus < (scrollNames[currentSite].length - 1)) {
+                    nextElement = forward();
+                } else if (touchDirection === 1 && currentFocus > 0) {
+                    nextElement = backwards();
+                } else {
+                    return false;
+                }
             }
 
             if (!isScrolling) {
@@ -136,8 +190,6 @@ let scrollModule = (function () {
     let getCurrentSite = function () {
         return currentSite;
     };
-
-    // window.addEventListener("touchmove", scrollFunction, {passive: false});
 
     return {
         initiateScrollBar: initiateScrollBar,
