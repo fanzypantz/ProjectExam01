@@ -32,7 +32,7 @@ let animateHeader = function () {
         genericFadeIn(launchH2, 1000);
         genericFadeIn(landH2, 1500);
         genericFadeIn(relaunchhH2, 2000);
-    }, 1000);
+    }, 500);
 };
 
 let indexModule = (function () {
