@@ -12,6 +12,28 @@ let mapNumber = function (input, inMin, inMax, outMin, outMax) {
     return (input - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 };
 
+let genericFadeIn = function (element, delay) {
+    element.style.transition = 'opacity 1000ms ease-in-out ' + delay + 'ms';
+    element.style.opacity = '1';
+};
+
+let animateHeader = function () {
+    let logo = document.querySelector('.container-logo svg');
+    let launchH2 = document.querySelector('#launch');
+    let landH2 = document.querySelector('#land');
+    let relaunchhH2 = document.querySelector('#relaunch');
+    logo.style.opacity = '0';
+    launchH2.style.opacity = '0';
+    landH2.style.opacity = '0';
+    relaunchhH2.style.opacity = '0';
+
+    setTimeout(function () {
+        genericFadeIn(logo, 500);
+        genericFadeIn(launchH2, 1000);
+        genericFadeIn(landH2, 1500);
+        genericFadeIn(relaunchhH2, 2000);
+    }, 1000);
+};
 
 let indexModule = (function () {
 
@@ -63,13 +85,13 @@ let scrollModule = (function () {
     let currentTitle = document.getElementsByTagName("title")[0].innerHTML;
 
     // Establish what site you are on
-    if (currentTitle === "Letha - Space Exploration Technologies") {
+    if (currentTitle === "SpaceX - Space Exploration Technologies") {
         currentSite = 0;
-    } else if (currentTitle === "Letha - Reusability") {
+    } else if (currentTitle === "SpaceX - Reusability") {
         currentSite = 1;
-    } else if (currentTitle === "Letha - Rockets") {
+    } else if (currentTitle === "SpaceX - Rockets") {
         currentSite = 2;
-    } else if (currentTitle === "Letha - Missions") {
+    } else if (currentTitle === "SpaceX - Missions") {
         currentSite = 3;
     }
 
@@ -77,23 +99,24 @@ let scrollModule = (function () {
     let initiateScrollBar = function () {
         if (currentSite === 3) {
             window.addEventListener('scroll', scroll, {passive: false});
+            document.querySelector('#scroll').style.height = '50px';
         } else {
             window.addEventListener('wheel', scrollFunction, {passive: false});
             window.addEventListener("touchstart", touchStart, {passive: false});
             window.addEventListener("touchend", touchEnd, {passive: false});
-        }
-
-        if (currentSite !== 3) {
             document.querySelector('#scroll').style.height = 1000 / (documentHeight / 1000) + "px";
             document.getElementsByTagName('body')[0].style.overflowY = "hidden";
-        } else {
-            document.querySelector('#scroll').style.height = '50px';
+            let allFadeElements = document.querySelectorAll('.fade'); // Enabling the fade animation only if JS is enabled
+            for (let i = 0; i < allFadeElements.length; i++) {
+                allFadeElements[i].style.opacity = '0'
+            }
         }
+
     };
 
     // Calculate percentage the bar should be at based on its own height and the scrollbar.
     let scroll = function () {
-        // calculate the cercentage the scrollbar should be at while at a certain spot in the page
+        // calculate the percentage the scrollbar should be at while at a certain spot in the page
         let docE = document.documentElement;
         let scrollPercentage = (docE['scrollTop'] || document.body['scrollTop']) / ((docE['scrollHeight'] || document.body['scrollHeight']) - docE.clientHeight) * 100;
         let scrollbarHeight = window.innerHeight * 0.65; // corresponds to 65vh
@@ -113,6 +136,7 @@ let scrollModule = (function () {
     };
 
     let touchEnd = function (e) {
+        // Use the touchend cord - touchstard cord to determine direction of the swipe.
         let difference = touchStartY - e.changedTouches[0].clientY;
         if (difference > 100) {
             touchDirection = 1;
@@ -125,6 +149,16 @@ let scrollModule = (function () {
         }
     };
 
+    let fadeIn = function (element, query) {
+        // fade in all the elements with a bigger and bigger delay
+        let fadeElements = element.querySelectorAll(query);
+        if (fadeElements !== undefined && fadeElements.length > 0) {
+            for (let i = 0; i < fadeElements.length; i++) {
+                fadeElements[i].style.transitionDelay = (250 * (i+1)) + "ms";
+                fadeElements[i].style.opacity = '1';
+            }
+        }
+    };
 
     // Use scrollIntoView as well as a tick function to scroll page and the custom scrollbar
     let scrollFunction = function (e) {
@@ -152,15 +186,15 @@ let scrollModule = (function () {
                 } else if ( e.deltaY < 0 && currentFocus > 0 ) {
                     nextElement = backwards();
                 } else {
-                    return false;
+                    return false; // Cancel scroll if no direction
                 }
             } else {
-                if (touchDirection === -1 && currentFocus < (scrollNames[currentSite].length - 1)) {
+                if (touchDirection === -1 && currentFocus > 0) {
                     nextElement = backwards();
-                } else if (touchDirection === 1 && currentFocus > 0) {
+                } else if (touchDirection === 1  && currentFocus < (scrollNames[currentSite].length - 1)) {
                     nextElement = forward();
                 } else {
-                    return false;
+                    return false; // Cancel scroll if no direction
                 }
             }
 
@@ -168,10 +202,11 @@ let scrollModule = (function () {
                 isScrolling = true;
 
                 if (isScrolling === true) {
-                    nextElement.scrollIntoView({behavior: "smooth"})
+                    nextElement.scrollIntoView({behavior: "smooth"});
+                    scrollInterval = setInterval(scroll, 15); // 15ms seem to make a smooth enough animation
+                    setTimeout(finishScroll, 500);
+                    fadeIn(nextElement, '.fade');
                 }
-                scrollInterval = setInterval(scroll, 15); // 15ms seem to make a smooth enough animation
-                setTimeout(finishScroll, 500);
             }
         }
     };
@@ -182,7 +217,8 @@ let scrollModule = (function () {
 
     return {
         initiateScrollBar: initiateScrollBar,
-        getCurrentSite: getCurrentSite
+        getCurrentSite: getCurrentSite,
+        fadeIn: fadeIn
     }
 
 })();
@@ -245,7 +281,7 @@ let reusabilityModule = (function () {
 
         // target.style.top = event.clientY + 'px';
         // target.style.left = (event.clientX + 50) + 'px';
-        target.style.display = 'block'
+        target.style.display = 'block';
         target.style.opacity = '1';
     };
 
@@ -321,7 +357,7 @@ let rocketModule = (function () {
 
             // Main info
             document.querySelector(`#${currentRocket}`).innerHTML += `
-                <div id="${currentRocket}-main" class="rocket-card main-card">
+                <div id="${currentRocket}-main" class="rocket-card main-card fade" style="opacity: 0">
                     <h3>${rockets[i].rocket_name}</h3>
                     <div class="rocket-info">
                         <p>Cost Per Launch</p>
@@ -689,6 +725,7 @@ let missionModule = (function () {
 
     let createMissions = function () {
 
+        // Misc formatting functions
         let missionId = function (missionId) {
             if (missionId === undefined || missionId.length === 0) {
                 return 'No ID';
@@ -826,6 +863,8 @@ let missionModule = (function () {
 })();
 
 let mobileModule = (function () {
+
+    // Simple hide unhide mobile menu
     let toggleMenu = function (e) {
         let nav = document.querySelector('.nav');
         if (window.getComputedStyle(nav).display === 'none') {
@@ -849,9 +888,13 @@ let mobileModule = (function () {
 
 })();
 
+// Generic initial stuff
+
 scrollModule.initiateScrollBar();
 mobileModule.initiate();
+animateHeader();
 
+// Initiate the correct page's JS
 if (scrollModule.getCurrentSite() === 0) {
     indexModule.initiate();
 } else if (scrollModule.getCurrentSite() === 1) {

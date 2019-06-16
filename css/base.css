@@ -178,6 +178,11 @@ header .nav .nav-element.active h2 {
   font-style: normal;
 }
 
+.fade {
+  transition: opacity 1000ms ease-in-out;
+  transition-delay: 250ms;
+}
+
 /* Index Section */
 #header-index {
   background: url(../images/header01.jpg) no-repeat center center;
@@ -342,6 +347,7 @@ header .nav .nav-element.active h2 {
   height: 430px;
   object-fit: cover;
   object-position: 100% 50%;
+  box-shadow: 0 0 15px black;
   filter: saturate(0%);
 }
 .gallery .images #img-01 {
@@ -460,6 +466,9 @@ header .nav .nav-element.active h2 {
   position: absolute;
   transition: transform 250ms ease-in-out;
 }
+#reflight-gallery .card .image {
+  box-shadow: 0 0 15px black;
+}
 #reflight-gallery .card:hover {
   z-index: 100;
 }
@@ -561,6 +570,7 @@ header .nav .nav-element.active h2 {
   width: 200px;
   height: 300px;
   position: relative;
+  box-shadow: 0 0 15px black;
 }
 #cores .cores-row .core-card:hover {
   cursor: pointer;
@@ -584,6 +594,7 @@ header .nav .nav-element.active h2 {
   position: relative;
   width: 60%;
   height: 40%;
+  box-shadow: 0 0 15px black;
   margin: 0 auto;
 }
 #first-landing .youtube .link-text {
@@ -739,6 +750,7 @@ header .nav .nav-element.active h2 {
   padding: 25px;
   opacity: 0;
   transition: opacity 100ms ease-in-out;
+  box-shadow: 0 0 15px black;
 }
 .rocket-card h3 {
   margin-top: 0;
@@ -757,6 +769,8 @@ header .nav .nav-element.active h2 {
   top: 50%;
   transform: translateY(-50%);
   opacity: 1;
+  transition: opacity 1000ms ease-in-out !important;
+  transition-delay: 250ms;
 }
 
 /* Missions Section */
@@ -807,6 +821,7 @@ header .nav .nav-element.active h2 {
   color: white;
   margin: 20px auto;
   border-bottom: 4px solid black;
+  box-shadow: 0 0 15px black;
 }
 #missions .container-mission .mission-description {
   margin: 20px 0;
