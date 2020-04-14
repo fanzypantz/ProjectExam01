@@ -1,5 +1,6 @@
 /* Default Section */
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   outline: 0;
@@ -8,7 +9,8 @@ html, body {
 a {
   text-decoration: none;
 }
-a h2, a h3 {
+a h2,
+a h3 {
   color: black;
 }
 
@@ -104,10 +106,12 @@ header .nav .nav-element {
 header .nav .nav-element:hover {
   background-color: #787878;
 }
-header .nav .nav-element:hover p, header .nav .nav-element:hover h2 {
+header .nav .nav-element:hover p,
+header .nav .nav-element:hover h2 {
   color: white;
 }
-header .nav .nav-element p, header .nav .nav-element h2 {
+header .nav .nav-element p,
+header .nav .nav-element h2 {
   margin: 5px;
   margin-left: 20px;
 }
@@ -121,7 +125,8 @@ header .nav .nav-element.active {
 header .nav .nav-element.active:hover {
   background-color: #787878;
 }
-header .nav .nav-element.active:hover p, header .nav .nav-element.active:hover h2 {
+header .nav .nav-element.active:hover p,
+header .nav .nav-element.active:hover h2 {
   color: white;
 }
 header .nav .nav-element.active h2 {
@@ -135,8 +140,8 @@ header .nav .nav-element.active h2 {
   width: 80%;
   height: 100%;
   z-index: -10;
-  background-color: #F1F1F1;
-  box-shadow: 0 0 15px black;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .container-main {
@@ -154,7 +159,7 @@ header .nav .nav-element.active h2 {
   position: relative;
   width: 100vw;
   height: 100vh;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .noHover {
@@ -244,7 +249,7 @@ header .nav .nav-element.active h2 {
   border-right: 5px solid black;
 }
 .history #history:after {
-  content: "story";
+  content: 'story';
   color: #005288;
 }
 .history .hangar {
@@ -347,7 +352,7 @@ header .nav .nav-element.active h2 {
   height: 430px;
   object-fit: cover;
   object-position: 100% 50%;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   filter: saturate(0%);
 }
 .gallery .images #img-01 {
@@ -387,7 +392,8 @@ header .nav .nav-element.active h2 {
   justify-content: space-between;
   align-items: center;
 }
-#index-cta #two-row-dragon #landing, #index-cta #two-row-dragon #core-hangar {
+#index-cta #two-row-dragon #landing,
+#index-cta #two-row-dragon #core-hangar {
   position: relative;
   height: 100%;
   width: 50%;
@@ -417,7 +423,8 @@ header .nav .nav-element.active h2 {
   min-width: 248px;
   margin: 50px;
 }
-#business .column #dreams, #business .column #jobs {
+#business .column #dreams,
+#business .column #jobs {
   border-bottom: 5px solid black;
 }
 #business .column img {
@@ -467,7 +474,7 @@ header .nav .nav-element.active h2 {
   transition: transform 250ms ease-in-out;
 }
 #reflight-gallery .card .image {
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 #reflight-gallery .card:hover {
   z-index: 100;
@@ -554,7 +561,7 @@ header .nav .nav-element.active h2 {
 }
 #cores .falcon-cores {
   background-color: white;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   width: 35%;
   margin: 20px auto;
   text-align: center;
@@ -570,7 +577,7 @@ header .nav .nav-element.active h2 {
   width: 200px;
   height: 300px;
   position: relative;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 #cores .cores-row .core-card:hover {
   cursor: pointer;
@@ -594,7 +601,7 @@ header .nav .nav-element.active h2 {
   position: relative;
   width: 60%;
   height: 40%;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
 }
 #first-landing .youtube .link-text {
@@ -750,7 +757,7 @@ header .nav .nav-element.active h2 {
   padding: 25px;
   opacity: 0;
   transition: opacity 100ms ease-in-out;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 .rocket-card h3 {
   margin-top: 0;
@@ -821,7 +828,7 @@ header .nav .nav-element.active h2 {
   color: white;
   margin: 20px auto;
   border-bottom: 4px solid black;
-  box-shadow: 0 0 15px black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 #missions .container-mission .mission-description {
   margin: 20px 0;
@@ -865,7 +872,8 @@ header .nav .nav-element.active h2 {
   }
 }
 @media only screen and (max-width: 1440px) {
-  #cores .cores-row, #cores .falcon-cores {
+  #cores .cores-row,
+  #cores .falcon-cores {
     width: 48%;
   }
 }
@@ -928,7 +936,8 @@ header .nav .nav-element.active h2 {
     width: 100%;
   }
 
-  #cores .cores-row, #cores .falcon-cores {
+  #cores .cores-row,
+  #cores .falcon-cores {
     width: 65%;
   }
 
@@ -1059,7 +1068,8 @@ header .nav .nav-element.active h2 {
     object-position: 50% 50%;
   }
 
-  #cores .cores-row, #cores .falcon-cores {
+  #cores .cores-row,
+  #cores .falcon-cores {
     width: 90%;
   }
 
@@ -1248,7 +1258,8 @@ header .nav .nav-element.active h2 {
     flex-direction: column;
     height: calc((90% / 3) * 2);
   }
-  #index-cta #two-row-dragon #landing, #index-cta #two-row-dragon #core-hangar {
+  #index-cta #two-row-dragon #landing,
+  #index-cta #two-row-dragon #core-hangar {
     width: 100%;
     height: 50%;
     margin: 0;
@@ -1299,7 +1310,9 @@ header .nav .nav-element.active h2 {
   }
 }
 @media only screen and (max-height: 870px) {
-  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp {
+  #falcon-9-dragon,
+  #falcon-9-sat,
+  #falcon-9-exp {
     transform: scale(0.8);
   }
 
@@ -1324,7 +1337,9 @@ header .nav .nav-element.active h2 {
     height: 100%;
   }
 
-  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp {
+  #falcon-9-dragon,
+  #falcon-9-sat,
+  #falcon-9-exp {
     transform: scale(0.7);
   }
 
@@ -1357,7 +1372,9 @@ header .nav .nav-element.active h2 {
     height: 170px;
   }
 
-  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp {
+  #falcon-9-dragon,
+  #falcon-9-sat,
+  #falcon-9-exp {
     transform: scale(0.6);
   }
 
@@ -1393,7 +1410,9 @@ header .nav .nav-element.active h2 {
     font-size: 2em;
   }
 
-  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp {
+  #falcon-9-dragon,
+  #falcon-9-sat,
+  #falcon-9-exp {
     transform: scale(0.5);
   }
 
@@ -1424,7 +1443,9 @@ header .nav .nav-element.active h2 {
     height: 140px;
   }
 
-  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp {
+  #falcon-9-dragon,
+  #falcon-9-sat,
+  #falcon-9-exp {
     transform: scale(0.4);
   }
 
@@ -1497,7 +1518,8 @@ header .nav .nav-element.active h2 {
   header .nav {
     height: 100vh;
   }
-  header .nav .nav-element p, header .nav header .nav .nav-element h2 {
+  header .nav .nav-element p,
+  header .nav header .nav .nav-element h2 {
     margin: 2px 2px 2px 10px;
   }
 
@@ -1515,7 +1537,9 @@ header .nav .nav-element.active h2 {
     display: none;
   }
 
-  #falcon-9-dragon, #falcon-9-sat, #falcon-9-exp {
+  #falcon-9-dragon,
+  #falcon-9-sat,
+  #falcon-9-exp {
     transform: scale(0.3);
   }
 

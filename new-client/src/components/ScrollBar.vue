@@ -41,6 +41,16 @@ export default {
     );
     this.scrollHeight = 1000 / (documentHeight / 1000);
     this.scrollLength = document.getElementsByClassName('scrollable').length;
+
+    if (window.pageYOffset > 0) {
+      setTimeout(() => {
+        this.scrollTo(600, 0);
+        // This is a rough fix due to the scrollbar animation precision
+        setTimeout(() => {
+          this.scroll();
+        }, 700);
+      }, 100);
+    }
   },
 
   destroyed() {
@@ -54,7 +64,7 @@ export default {
 
       let animation = setInterval(() => {
         this.scroll();
-      }, 1);
+      }, 0);
 
       setTimeout(() => {
         this.isScrolling = false;
@@ -66,10 +76,8 @@ export default {
       if (e !== undefined) {
         e.preventDefault();
       }
-      console.log('what: ');
 
       if (!this.isScrolling && this.currentFocus >= 0) {
-        console.log('SCROLL: ', e);
         if (e.deltaY !== undefined && e.deltaY !== 0) {
           let windowHeight = window.innerHeight;
           if (e.deltaY > 0 && this.currentFocus < this.scrollLength - 1) {
