@@ -112,19 +112,19 @@ header
         margin-left: 20px
 
       p
-        color: $font-secondary
+        color: $font
 
 
 header .nav .nav-element.active
-  background-color: black
+  background-color: $spaceX
 
   &:hover
-    background-color: $font-secondary
+    background-color: #a7a9ac
 
     p, h2
       color: white
 
-  h2
+  h2, p
     color: white
 
 .bg-main
@@ -151,6 +151,9 @@ header .nav .nav-element.active
   width: 100vw
   height: 100vh
   box-shadow: $box-shadow
+  display: flex
+  justify-content: center
+  align-items: center
 
 .noHover
     pointer-events: none

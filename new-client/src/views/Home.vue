@@ -1,8 +1,8 @@
 <template>
   <div class="container-main">
-    <section id="header-index" class="one-page scrollable scroll-0"></section>
+    <section id="header-index" class="one-page scrolltarget"></section>
 
-    <section class="container-normal history scrollable scroll-1">
+    <section class="container-normal history scrolltarget">
       <h2 class="fade">Making</h2>
       <h2 id="history" class="fade">Hi</h2>
       <div class="reflight fade">
@@ -28,17 +28,14 @@
       </a>
     </section>
 
-    <section id="hero01" class="one-page scrollable scroll-2">
-      <div class="slogan">
-        <p class="text fade">
-          "If you get up in the morning and think the future is going to be
-          better, it is a bright day. Otherwise, it's not."
-        </p>
-        <p class="signature fade">-Elon Musk</p>
-      </div>
-    </section>
+    <Slogan
+      id="hero01"
+      slogan="If you get up in the morning and think the future is going to be
+            better, it is a bright day. Otherwise, it's not."
+      author="Elon Musk"
+    />
 
-    <section class="container-normal gallery scrollable scroll-3">
+    <section class="container-normal gallery scrolltarget">
       <div class="images">
         <img
           id="img-01"
@@ -120,17 +117,14 @@
       </div>
     </section>
 
-    <section id="hero02" class="one-page scrollable scroll-4">
-      <div class="slogan">
-        <p class="text fade">
-          "When Henry Ford made cheap, reliable cars, people said, 'Nah, what's
-          wrong with a horse?' That was a huge bet he made, and it worked."
-        </p>
-        <p class="signature fade">-Elon Musk</p>
-      </div>
-    </section>
+    <Slogan
+      id="hero02"
+      slogan="When Henry Ford made cheap, reliable cars, people said, 'Nah, what's
+    wrong with a horse?' That was a huge bet he made, and it worked."
+      author="Elon Musk"
+    />
 
-    <section id="index-cta" class="container-normal scrollable scroll-5">
+    <section id="index-cta" class="container-normal scrolltarget">
       <a id="dragon-space" href="rockets.html#falcon-9">
         <img
           class="fade"
@@ -165,17 +159,14 @@
       </div>
     </section>
 
-    <section id="hero03" class="one-page scrollable scroll-6">
-      <div class="slogan">
-        <p class="text fade">
-          "We're going to make it happen. As God is my bloody witness, I'm
-          hell-bent on making it work."
-        </p>
-        <p class="signature fade">-Elon Musk</p>
-      </div>
-    </section>
+    <Slogan
+      id="hero03"
+      slogan="We're going to make it happen. As God is my bloody witness, I'm
+    hell-bent on making it work."
+      author="Elon Musk"
+    />
 
-    <section id="business" class="container-normal scrollable scroll-7">
+    <section id="business" class="container-normal scrolltarget">
       <div class="column">
         <h1 id="dreams" class="fade">Relive your dreams</h1>
         <img
@@ -206,7 +197,10 @@
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
 
+import Slogan from '../components/Slogan';
+
 export default {
   name: 'Home',
+  components: { Slogan },
 };
 </script>

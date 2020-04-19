@@ -55,7 +55,7 @@ header .container-logo svg {
   margin-left: 10px;
 }
 header .container-logo h1 {
-  text-shadow: 2px 2px 0 black;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.41);
   margin: 5px 0;
   color: white;
   font-size: 4.5em;
@@ -116,20 +116,21 @@ header .nav .nav-element h2 {
   margin-left: 20px;
 }
 header .nav .nav-element p {
-  color: #787878;
+  color: black;
 }
 
 header .nav .nav-element.active {
-  background-color: black;
+  background-color: #005288;
 }
 header .nav .nav-element.active:hover {
-  background-color: #787878;
+  background-color: #a7a9ac;
 }
 header .nav .nav-element.active:hover p,
 header .nav .nav-element.active:hover h2 {
   color: white;
 }
-header .nav .nav-element.active h2 {
+header .nav .nav-element.active h2,
+header .nav .nav-element.active p {
   color: white;
 }
 
@@ -160,6 +161,9 @@ header .nav .nav-element.active h2 {
   width: 100vw;
   height: 100vh;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .noHover {
@@ -190,7 +194,7 @@ header .nav .nav-element.active h2 {
 
 /* Index Section */
 #header-index {
-  background: url(../images/header01.jpg) no-repeat center center;
+  background: url(../images/header07.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -268,28 +272,6 @@ header .nav .nav-element.active h2 {
   margin: 0;
   font-size: 3em;
   font-weight: 300;
-}
-
-.slogan {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: letter-gothic-std, monospace;
-  font-weight: 600;
-  color: white;
-  text-shadow: 2px 2px 0 black;
-}
-.slogan .text {
-  text-align: center;
-  font-size: 2em;
-}
-.slogan .signature {
-  font-size: 2em;
-  text-align: right;
-  font-family: wreath, serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .gallery .description {

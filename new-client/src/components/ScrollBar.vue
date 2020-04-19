@@ -30,8 +30,12 @@ export default {
   },
 
   mounted() {
+    // Attach the event listeners if this component is mounted, no need for them outside.
+    // Thi should make it fairly portable
     window.addEventListener('wheel', this.handleScroll, { passive: false });
+    window.addEventListener('resize', this.scrollToTop);
 
+    // Information needed to resize the scrollbar
     let documentHeight = Math.max(
       document.body.scrollHeight,
       document.body.offsetHeight,
@@ -40,21 +44,19 @@ export default {
       document.documentElement.offsetHeight
     );
     this.scrollHeight = 1000 / (documentHeight / 1000);
-    this.scrollLength = document.getElementsByClassName('scrollable').length;
+    // Count the amount of elements with the scrolltarget CSS name, this is the amount of "pages" there are
+    this.scrollLength = document.getElementsByClassName('scrolltarget').length;
 
     if (window.pageYOffset > 0) {
       setTimeout(() => {
-        this.scrollTo(600, 0);
-        // This is a rough fix due to the scrollbar animation precision
-        setTimeout(() => {
-          this.scroll();
-        }, 700);
+        this.scrollToTop();
       }, 100);
     }
   },
 
   destroyed() {
     window.removeEventListener('wheel', this.handleScroll);
+    window.removeEventListener('resize', this.scrollToTop);
   },
 
   methods: {
@@ -70,6 +72,15 @@ export default {
         this.isScrolling = false;
         clearInterval(animation);
       }, duration);
+    },
+
+    scrollToTop() {
+      this.scrollTo(600, 0);
+      this.currentFocus = 0;
+      // This is a rough fix due to the scrollbar animation precision
+      setTimeout(() => {
+        this.scroll();
+      }, 700);
     },
 
     handleScroll(e) {
