@@ -281,88 +281,6 @@ header .nav .nav-element.active p {
   font-weight: 300;
 }
 
-.gallery .description {
-  position: absolute;
-  top: 50%;
-  right: -3%;
-  transform: translateY(-50%);
-  font-size: 2em;
-}
-.gallery .description p {
-  margin: 10px 0;
-}
-.gallery .description .container-gallery-text {
-  color: #787878;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 740px;
-}
-.gallery .description .container-gallery-text .text {
-  width: 300px;
-  margin-left: 40px;
-  align-self: flex-end;
-}
-.gallery .description .container-gallery-text .line {
-  width: 340px;
-  opacity: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.gallery .description .container-gallery-text .line p {
-  color: white;
-  margin-right: 20px;
-}
-.gallery .description .container-gallery-text .line svg {
-  width: 300px;
-  height: 6px;
-  stroke: white;
-  stroke-width: 3px;
-}
-.gallery .description .container-gallery-text:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-}
-.gallery .description .container-gallery-text:hover .line {
-  opacity: 1;
-}
-.gallery .images {
-  position: absolute;
-  top: 50%;
-  left: 3%;
-  transform: translateY(-50%);
-}
-.gallery .images .image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 260px;
-  height: 430px;
-  object-fit: cover;
-  object-position: 100% 50%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  filter: saturate(0%);
-}
-.gallery .images #img-01 {
-  transform: translate(0, -50%);
-}
-.gallery .images #img-02 {
-  transform: translate(40px, -50%) scale(1.1);
-}
-.gallery .images #img-03 {
-  transform: translate(80px, -50%) scale(1.2);
-}
-.gallery .images #img-04 {
-  transform: translate(120px, -50%) scale(1.3);
-}
-.gallery .images #img-05 {
-  transform: translate(160px, -50%) scale(1.4);
-}
-.gallery .images .selected {
-  filter: none;
-}
-
 #index-cta {
   display: flex;
   flex-direction: column;
@@ -874,19 +792,6 @@ header .nav .nav-element.active p {
   #falcon-heavy-main {
     left: 14% !important;
   }
-
-  .gallery .images {
-    transform: scale(0.8) translateY(-50%);
-  }
-  .gallery .description {
-    right: -17%;
-  }
-  .gallery .description .container-gallery-text {
-    width: 600px;
-  }
-  .gallery .description .container-gallery-text .line {
-    width: 150px;
-  }
 }
 @media only screen and (max-width: 1024px) {
   .rocket-card {
@@ -936,26 +841,6 @@ header .nav .nav-element.active p {
 
   header .nav {
     width: 140px;
-  }
-
-  .gallery .images {
-    transform: scale(0.8, 0.8) translateY(-50%);
-    left: -7%;
-  }
-  .gallery .description {
-    right: -7%;
-  }
-  .gallery .description .container-gallery-text {
-    width: 400px;
-  }
-  .gallery .description .container-gallery-text .text {
-    font-size: 0.9em;
-  }
-  .gallery .description .container-gallery-text .line {
-    width: 90px;
-  }
-  .gallery .description .container-gallery-text .line p {
-    margin-left: 10px;
   }
 
   .link-text h3 {
@@ -1126,47 +1011,6 @@ header .nav .nav-element.active p {
     font-size: 2em;
   }
 
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .gallery .images {
-    width: 80%;
-    height: 50%;
-    position: static;
-    left: unset;
-    top: unset;
-    transform: unset;
-  }
-  .gallery .images .image {
-    display: none;
-    position: static;
-    top: unset;
-    left: unset;
-  }
-  .gallery .images #img-05 {
-    width: 100%;
-    height: 100%;
-    display: block;
-    transform: unset;
-  }
-  .gallery .description {
-    position: static;
-    right: unset;
-    top: unset;
-    bottom: unset;
-    width: 80%;
-    transform: unset;
-  }
-  .gallery .description .container-gallery-text {
-    width: 100%;
-  }
-  .gallery .description .container-gallery-text .line {
-    display: none;
-  }
-
   #index-cta img {
     object-position: 50% 50%;
   }
@@ -1252,14 +1096,6 @@ header .nav .nav-element.active p {
     width: 100%;
     height: 50%;
     margin: 0;
-  }
-
-  .gallery .images {
-    width: 100%;
-  }
-  .gallery .description {
-    width: 100%;
-    bottom: 5%;
   }
 }
 @media only screen and (max-width: 375px) {
