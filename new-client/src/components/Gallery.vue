@@ -1,76 +1,51 @@
 <template>
   <section class="container-normal gallery scrolltarget">
     <div class="images">
-      <div
-        @click="handleClick(0)"
-        :class="'gallery-image-container ' + getClass(0)"
-      >
-        <img
-          id="img-01"
-          class="image fade"
-          src="../assets/images/gallery01.jpg"
-          alt=""
-        />
-        <p id="text-01" class="text">Grid Fins</p>
-      </div>
-      <div
-        @click="handleClick(1)"
-        :class="'gallery-image-container ' + getClass(1)"
-      >
-        <img
-          id="img-02"
-          class="image fade"
-          src="../assets/images/gallery02.jpg"
-          alt=""
-        />
-        <p id="text-02" class="text">Hawthorne Site</p>
-      </div>
-      <div
-        @click="handleClick(2)"
-        :class="'gallery-image-container ' + getClass(2)"
-      >
-        <img
-          id="img-03"
-          class="image fade"
-          src="../assets/images/gallery03.jpg"
-          alt=""
-        />
-        <p id="text-03" class="text">Return from Space</p>
-      </div>
-
-      <div
-        @click="handleClick(3)"
-        :class="'gallery-image-container ' + getClass(3)"
-      >
-        <img
-          id="img-04"
-          class="image fade"
-          src="../assets/images/gallery04.jpg"
-          alt=""
-        />
-        <p id="text-04" class="text">Raptor Engines</p>
-      </div>
-
-      <div
-        @click="handleClick(4)"
-        :class="'gallery-image-container ' + getClass(4)"
-      >
-        <img
-          id="img-05"
-          class="image selected fade"
-          src="../assets/images/gallery05.jpg"
-          alt=""
-        />
-        <p id="text-05" class="text">Dragon Capsule</p>
-      </div>
+      <GalleryImage
+        @handleClick="handleClick"
+        :index="0"
+        :current-focus="currentFocus"
+        title="Arabsat-6A"
+        description="The April 11 mission launched an advanced communications satellite called Arabsat-6A, which will provide communications services to customers living in the Middle East, Africa and parts of Europe. Onlookers turned out to enjoy the beautiful weather during the early-evening launch."
+      />
+      <GalleryImage
+        @handleClick="handleClick"
+        :index="1"
+        :current-focus="currentFocus"
+        title="Grid Fins"
+        description="Falcon 9’s first stage is equipped with hypersonic grid fins that manipulate the direction of the stage’s lift during reentry. The fins are placed in an X-wing configuration and are stowed on ascent and deployed during reentry. The fins, which measure 4 feet by 5 feet, can roll, pitch, and yaw the 14-story stage autonomously in order to target a precision landing."
+      />
+      <GalleryImage
+        @handleClick="handleClick"
+        :index="2"
+        :current-focus="currentFocus"
+        title="Return from Space"
+        description="The Falcon 9 first-stage landing tests were a series of controlled-descent flight tests conducted by SpaceX between 2013 and 2016. Since 2017, the first stage of Falcon 9 missions has been routinely landed if the rocket performance allowed it, and if SpaceX chose to recover the stage."
+      />
+      <GalleryImage
+        @handleClick="handleClick"
+        :index="3"
+        :current-focus="currentFocus"
+        title="Raptor Engines"
+        description="The SpaceX Raptor is a full-flow, staged-combustion, methane-fueled rocket engine manufactured by SpaceX. The engine is powered by cryogenic liquid methane and liquid oxygen, rather than the RP-1 kerosene and LOX used in SpaceX's prior Merlin and Kestrel rocket engines."
+      />
+      <GalleryImage
+        @handleClick="handleClick"
+        :index="4"
+        :current-focus="currentFocus"
+        title="Dragon Capsule"
+        description="Dragon is a free-flying spacecraft designed to deliver both cargo and people to orbiting destinations. It is the only spacecraft currently flying that is capable of returning significant amounts of cargo to Earth. Currently Dragon carries cargo to space, but it was designed from the beginning to carry humans. The first demonstration flight under NASA's "
+      />
     </div>
   </section>
 </template>
 
 <script>
+import GalleryImage from './GalleryImage';
+
 export default {
   name: 'Gallery',
-
+  components: { GalleryImage },
   data() {
     return {
       currentFocus: 1,
@@ -79,26 +54,6 @@ export default {
   },
 
   methods: {
-    getClass(index) {
-      if (index > this.currentFocus) {
-        if (index > this.currentFocus + 1) {
-          return 'far-right';
-        } else {
-          return 'right';
-        }
-      } else if (index === this.currentFocus) {
-        return 'current-focus';
-      } else if (index < this.currentFocus) {
-        if (index < this.currentFocus - 1) {
-          return 'far-left';
-        } else {
-          return 'left';
-        }
-      } else {
-        return '';
-      }
-    },
-
     leftClick() {
       this.isAnimating = true;
       this.currentFocus = this.currentFocus - 1;
@@ -116,13 +71,12 @@ export default {
     },
 
     handleClick(index) {
+      console.log('got event: ', index);
       if (index !== this.currentFocus && !this.isAnimating) {
-        if (index > 0 && index < 4) {
-          if (index > this.currentFocus) {
-            this.rightClick();
-          } else {
-            this.leftClick();
-          }
+        if (index > this.currentFocus) {
+          this.rightClick();
+        } else {
+          this.leftClick();
         }
       }
     },
@@ -142,66 +96,4 @@ $delay: 500ms
     height: 60%
     width: 100%
     display: flex
-
-  .gallery-image-container
-    position: absolute
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25)
-    margin: 0
-    transition: top $delay ease, left $delay ease, width $delay ease, height $delay ease, transform $delay ease, opacity $delay ease
-
-    .text
-      color: white
-      padding-left: 20px
-      margin: 0
-      line-height: 40px
-      background-color: #005288
-      transition: opacity $delay ease, tranform $delay ease
-
-    img
-      width: 100%
-      height: calc(100% - 40px)
-      object-fit: cover
-      transition: height $delay ease
-
-  .far-right, .far-left
-    width: 300px
-    height: 300px
-    opacity: 0
-    transform: scale(0)
-    top: calc(100% - 300px)
-
-  .left, .right
-    width: 300px
-    height: 300px
-    top: calc(100% - 300px)
-
-    img
-      height: 100%
-
-    .text
-      opacity: 0
-      transform: scaleY(0)
-
-  .far-left
-    left: 0
-    transform-origin: bottom left
-
-  .far-right
-    left: calc(100% - 300px)
-    transform-origin: bottom right
-
-  .left
-    left: 0
-    transform-origin: bottom left
-
-  .right
-    left: calc(100% - 300px)
-    transform-origin: bottom right
-
-  .current-focus
-    left: 50%
-    top: 0
-    transform: translateX(-50%)
-    width: 400px
-    height: 500px
 </style>

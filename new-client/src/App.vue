@@ -92,27 +92,27 @@
             <p>1/4</p>
           </div>
         </router-link>
-        <router-link to="/about" title="reusability page">
+        <router-link to="/" title="reusability page">
           <div class="nav-element">
             <h2>Stage 2</h2>
             <p>Reusability</p>
             <p>2/4</p>
           </div>
         </router-link>
-        <a href="rockets.html" title="rockets page">
+        <router-link to="/" title="rockets page">
           <div class="nav-element">
             <h2>Stage 3</h2>
             <p>Rockets</p>
             <p>3/4</p>
           </div>
-        </a>
-        <a href="missions.html" title="missions page">
+        </router-link>
+        <router-link to="/" title="missions page">
           <div class="nav-element">
             <h2>Stage 4</h2>
             <p>Missions</p>
             <p>4/4</p>
           </div>
-        </a>
+        </router-link>
       </nav>
     </header>
 

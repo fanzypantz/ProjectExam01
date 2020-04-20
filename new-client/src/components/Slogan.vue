@@ -6,7 +6,10 @@
       ref="slogan-button-01"
       :class="'slogan-button' + (buttonFade ? ' fade-out' : ' fade-in')"
     >
-      <h3 class="quote-button">Show me an Elon Quote!</h3>
+      <h3 class="quote-button">
+        Show me <br />
+        an Elon Musk quote!
+      </h3>
     </div>
     <div
       @click="toggleSlogan"
