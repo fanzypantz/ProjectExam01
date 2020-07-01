@@ -45,7 +45,7 @@
     />
 
     <section id="index-cta" class="container-normal scrolltarget">
-      <a id="dragon-space" href="rockets.html#falcon-9">
+      <a id="dragon-space" href="">
         <img
           class="fade"
           src="../assets/images/dragon_capsule.jpg"
@@ -56,7 +56,7 @@
         </div>
       </a>
       <div id="two-row-dragon">
-        <a id="landing" href="missions.html#missions">
+        <a id="landing" href="">
           <img
             class="fade"
             src="../assets/images/ofc_ilu_landing.jpg"
@@ -66,7 +66,7 @@
             <h3>Launch Missions</h3>
           </div>
         </a>
-        <a id="core-hangar" href="reusability.html#cores">
+        <a id="core-hangar" href="">
           <img
             class="fade"
             src="../assets/images/falcon_core.jpg"

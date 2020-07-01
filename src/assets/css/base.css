@@ -256,6 +256,10 @@ header .nav .nav-element.active p {
   height: 100%;
   object-fit: cover;
   object-position: 100% 50%;
+  transition: transform 250ms ease;
+}
+.history .hangar img:hover {
+  transform: scale(1.2);
 }
 .history .hangar .link-text {
   opacity: 0;
@@ -277,6 +281,7 @@ header .nav .nav-element.active p {
   align-items: center;
 }
 #index-cta #dragon-space {
+  overflow: hidden;
   position: relative;
   width: 100%;
   height: 40%;
@@ -290,6 +295,7 @@ header .nav .nav-element.active p {
 }
 #index-cta #two-row-dragon #landing,
 #index-cta #two-row-dragon #core-hangar {
+  overflow: hidden;
   position: relative;
   height: 100%;
   width: 50%;
@@ -303,6 +309,10 @@ header .nav .nav-element.active p {
   height: 100%;
   object-fit: cover;
   object-position: 100% 50%;
+  transition: transform 250ms ease;
+}
+#index-cta img:hover {
+  transform: scale(1.2);
 }
 
 #business {

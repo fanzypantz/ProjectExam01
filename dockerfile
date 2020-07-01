@@ -9,8 +9,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 # install and cache app dependencies
 COPY package.json /app/package.json
-RUN npm install
-RUN npm install @vue/cli@4.4.4 -g
+RUN yarn install
+RUN yarn install @vue/cli@4.4.4 -g
 
 # start app
 CMD ["npm", "run", "serve"]

@@ -145,10 +145,18 @@ $delay: 500ms
 .left
   left: 0
   transform-origin: bottom left
+  transition: transform 250ms ease
+
+  &:hover
+    transform: scale(1.2)
 
 .right
   left: calc(100% - 300px)
   transform-origin: bottom right
+  transition: transform 250ms ease
+
+  &:hover
+    transform: scale(1.2)
 
 .current-focus
   left: 50%
